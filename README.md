@@ -1,14 +1,11 @@
-# VLN-Safe: Successful but Unsafe
+# Successful but Unsafe: An Analytical Benchmark for Revealing Collisions in Vision-and-Language Navigation 
 
-Code, configs and episode-level results for
+<p align="center">
+  <a href="https://arxiv.org/abs/TODO"><img src="https://img.shields.io/badge/Paper-arXiv-b31b1b" alt="arXiv"></a>
+  <img src="https://img.shields.io/badge/Code-Released-orange" alt="Code Released">
+</p>
 
-> **Successful but Unsafe: An Analytical Benchmark for Revealing Collisions in
-> Vision-and-Language Navigation**
-> TODO: authors. arXiv:TODO, 2026. [[paper]](https://arxiv.org/abs/TODO)
-
-Standard VLN-CE metrics (SR, SPL, nDTW) say whether an agent reached the goal, not whether it
-hit anything on the way. VLN-Safe re-runs published, frozen VLN-CE agents in Habitat and
-measures contact alongside success:
+Standard VLN-CE metrics (SR, SPL, nDTW) say whether an agent reached the goal, not whether it hit anything on the way. VLN-Safe re-runs published, frozen VLN-CE agents in Habitat and measures contact alongside success:
 
 - **P1: do successful episodes avoid collisions?** Under the standard *sliding* regime,
   38.5–56.8% of successful R2R-CE episodes contain at least one collision step, across six
