@@ -1,0 +1,13 @@
+# `stall-mem1` with the depth veto off: the stall-only ablation. Only
+# movement history vetoes a forward; the escape still chooses its heading from depth, and
+# clearance is still logged. Answers "is the depth veto needed?" and doubles as the
+# simplest reactive baseline (escape after a forward has already stalled).
+threshold_m: 0.05
+max_consecutive_aborts: 3
+max_episode_aborts: 12
+memory_frames: 1
+lookahead_steps: 2
+max_escape_deg: 90.0
+eps: 0.0
+stall_m: 0.01
+depth_veto: false

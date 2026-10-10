@@ -1,0 +1,42 @@
+# BEVBert (T2, ETPNav-lineage, BEV map features). The T2 fallback: if ETP-R1 misses its
+# reproduction gate, BEVBert becomes the "current architecture" T2 row.
+# Same worker as ETPNav/ETP-R1 (family: etpnav_worker), different code_root and trainer.
+# Conditional -- built only in Phase D6, and only if D1..D5 have landed.
+# Constants read from external/BEVBert @ ee40002 -- see docs/agent_notes/bevbert.md.
+id: bevbert
+display_name: BEVBert
+tier: T2
+family: etpnav_worker
+worker_python: $VLNSAFE_ENVS/vlnsafe-etpnav/bin/python
+# the VLN-CE half of the repo lives in a subdirectory; the repo root is the discrete-VLN
+# (MatterSim) code, which this project does not use.
+code_root: external/BEVBert/bevbert_ce
+# BEVBert registers its own SS trainer (SS-BEV), not ETPNav's SS-ETP. Its
+# _nav_gmap_variable(cur_vp, cur_pos, cur_ori) and extract_instruction_tokens(..., pad_id=0)
+# keep ETPNav's signatures, so no `task_type:` block (that is ETP-R1-only).
+worker_trainer_module: vlnce_baselines.ss_trainer_BEV
+sensor_rig: etpnav_12view
+back_algo: control
+
+# run_r2r/iter_train.yaml carries TRAINER_NAME: SS-BEV and MODEL.task_type: r2r.
+exp_config:
+  r2r: run_r2r/iter_train.yaml
+dataset:
+  r2r: bert                      # DATA_PATH is R2R_VLNCE_v1-2_preprocessed_BERTidx
+checkpoint:
+  r2r: ${VLNSAFE_CHECKPOINTS}/bevbert/release_r2r/ckpt.iter9600.pth
+# no `pretrained:` -- run_r2r/iter_train.yaml sets MODEL.pretrained_path: null; BEVBert's
+# eval builds the policy from the CE checkpoint alone.
+
+published:
+  r2r: {sr: null, spl: null, regime: slide, source: "BEVBert Tab. 2 (R2R-CE val-unseen) — fill in D6; run_r2r/main.bash evals with ALLOW_SLIDING True"}
+reproduction_tolerance_sr: 1.0
+
+unavailable:
+  value_estimate: "map-based topological planner; the released checkpoint has no value head"
+  # The public repo releases VLN-CE code and weights for R2R-CE only (README "TODOs":
+  # "Release VLN-CE (R2R-CE) code"); there is no run_rxr/ and no RxR-CE checkpoint. Every
+  # BEVBert RxR cell in the tables is therefore \nmark, not \TBD.
+  rxr_arm: >-
+    BEVBert released VLN-CE code and weights for R2R-CE only; the repo ships no RxR-CE
+    eval config or checkpoint (external/BEVBert @ ee40002).

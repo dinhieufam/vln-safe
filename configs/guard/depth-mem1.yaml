@@ -1,0 +1,10 @@
+# `stall-mem1` without the stall veto: the 1-frame depth-only ablation.
+# With `stall-only` it completes depth x stall at the method's 1-frame memory; the older
+# `default` / `uncapped` depth-only arms use 8 frames, so they change two components at once.
+threshold_m: 0.05
+max_consecutive_aborts: 3
+max_episode_aborts: 12
+memory_frames: 1
+lookahead_steps: 2
+max_escape_deg: 90.0
+eps: 0.0

@@ -1,0 +1,10 @@
+{
+  "agent": "etpnav",
+  "benchmark": "rxr",
+  "episode_count": 1223,
+  "migrated_from": "e1_full_rxr_no_sliding/e1_rxr_val_unseen_no_sliding_per_episode.csv",
+  "note": "migrated from pre-release harness logs; see results/provenance.md",
+  "regime": "block",
+  "seed": 20260819,
+  "split": "val_unseen"
+}

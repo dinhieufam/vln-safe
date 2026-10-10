@@ -1,0 +1,31 @@
+# CMA (T1, recurrent VLN-CE baseline). The T1 comparator behind P2/P3/P4; runs in-process
+# (family: vlnce_policy — VLN-CE's vlnce_baselines is already on the harness path). The
+# archived CMA log has empty internal_* columns because the pre-release provider never read the
+# action categorical; the port adds that read-out.
+id: cma
+display_name: CMA
+tier: T1
+family: vlnce_policy
+policy_name: CMAPolicy          # vlnce_baselines registered policy name
+sensor_rig: vlnce_recurrent    # RGB + DEPTH at VLN-CE's own resolution; defined in Phase D2
+
+exp_config:
+  r2r: vlnce_baselines/config/r2r_baselines/cma_pm_da_aug_tune.yaml
+  rxr: vlnce_baselines/config/rxr_baselines/rxr_cma_en.yaml
+dataset:
+  r2r: official
+  rxr: base
+checkpoint:
+  r2r: ${VLNSAFE_CHECKPOINTS}/cma/cma_pm_da_aug/best_checkpoint.pth
+  # The RxR-Habitat monolingual CMA baseline IS public (VLN-CE README "Baseline Model",
+  # 196 MB) -- a public RxR-CE CMA checkpoint exists, so the RxR arm is
+  # a real arm, not an \nmark. English only; hi/te exist but the paper reports en.
+  rxr: ${VLNSAFE_CHECKPOINTS}/cma/rxr_cma_en/ckpt.pth
+
+published:
+  r2r: {sr: null, spl: null, regime: slide, source: "re-run in this project as the T1 comparator; VLN-CE Tab. 1 CMA+PM+DA+Aug is the sanity target"}
+  rxr: {sr: null, spl: null, regime: block, source: "RxR-Habitat 'Monolingual CMA Baseline' (VLN-CE README); leaderboard-only numbers, so no SR to gate against"}
+reproduction_tolerance_sr: 1.0
+
+unavailable:
+  value_estimate: "CMA is a recurrent imitation-learned policy; it has no value head"

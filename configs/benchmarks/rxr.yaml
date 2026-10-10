@@ -1,0 +1,30 @@
+# RxR-CE. Differs from R2R in HFOV, camera height, turn angle and body radius -- the
+# exact differences the equivalence gate exists to catch. Every rig
+# constant is applied in simulator/environment.py::build_rxr_config (ported from
+# the pre-release harness) and echoed into manifest.json.
+id: rxr
+habitat_base_config: vlnce_baselines/config/rxr_baselines/rxr_cma_en.yaml
+# dataset roots by tokenizer/encoding; an agent config's `dataset: {rxr: <key>}` selects one.
+dataset:
+  xlmr: ${VLNSAFE_DATASETS}/RxR_VLNCE_v0_enc_xlmr   # XLM-R tokens; ETPNav's and ETP-R1's RxR
+                                                   # ckpts both read this (val_unseen guide
+                                                   # files are byte-identical between the two
+                                                   # vendor copies -- docs/agent_notes/etpr1.md)
+  base: ${VLNSAFE_DATASETS}/RxR_VLNCE_v0            # untokenised; for a future CMA/Seq2Seq RxR
+  scenes: ${VLNSAFE_DATASETS}
+split: val_unseen
+languages: [en, hi, te]
+# the archived RxR autopsy sampled the split at stride 9 (RxR annotates one trajectory
+# with ~9 language variants in consecutive rows) under a different seed.
+select:
+  stride: 9
+  offset: 0
+  seed: 20260819
+rig:
+  hfov_deg: 63
+  camera_height_m: 0.88
+  forward_step_m: 0.25
+  turn_angle_deg: 30
+  agent_radius_m: 0.18
+  depth_clearance_min_m: 0.0     # the clearance-only ring stays at 0/10 even though RxR's
+  depth_clearance_max_m: 10.0    # policy depth input uses 0.5/5.0 (see build_clearance_ring)

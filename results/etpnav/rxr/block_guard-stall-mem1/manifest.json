@@ -1,0 +1,47 @@
+{
+  "agent": "etpnav",
+  "benchmark": "rxr",
+  "checkpoint": "data/checkpoints/etpnav/release_rxr/ckpt.iter19600.pth",
+  "command": "vlnsafe/__main__.py run --agent etpnav --benchmark rxr --regime block --shards 3 --shard-index 0 --out results/etpnav/rxr/block_guard-stall-mem1 --guard stall-mem1",
+  "dataset_key": "xlmr",
+  "episode_count": 1223,
+  "episode_subset": null,
+  "full_split": true,
+  "gpu": "7",
+  "guard": {
+    "config": {
+      "eps": 0.0,
+      "lookahead_steps": 2,
+      "max_consecutive_aborts": 3,
+      "max_episode_aborts": 12,
+      "max_escape_deg": 90.0,
+      "memory_frames": 1,
+      "stall_m": 0.01,
+      "threshold_m": 0.05
+    },
+    "exempt_guard_redecisions": false,
+    "mode": "manoeuvre",
+    "name": "stall-mem1"
+  },
+  "merged_from": [
+    "manifest.shard0.json",
+    "manifest.shard1.json",
+    "manifest.shard2.json"
+  ],
+  "physics": {
+    "agent_height_m": 0.88,
+    "agent_radius_m": 0.18,
+    "allow_sliding": false,
+    "forward_step_m": 0.25,
+    "habitat_lab_version": "0.1.7",
+    "habitat_sim_version": "0.1.7",
+    "turn_angle_deg": 30
+  },
+  "regime": "block",
+  "seed": 20260819,
+  "shard_index": 0,
+  "shards": 3,
+  "split": "val_unseen",
+  "subsample": null,
+  "tryout": false
+}

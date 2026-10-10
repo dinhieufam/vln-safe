@@ -1,0 +1,9 @@
+# `stall-mem1` without the episode cap K: run on R2R val_seen to calibrate K held-out
+#: K := p95 of depth vetoes per episode.
+threshold_m: 0.05
+max_consecutive_aborts: 3
+memory_frames: 1
+lookahead_steps: 2
+max_escape_deg: 90.0
+eps: 0.0
+stall_m: 0.01

@@ -1,0 +1,170 @@
+{
+  "cma": {
+    "episodes": 154,
+    "forward_steps": 46710,
+    "depth_domain_steps": 3665,
+    "depth_domain_collisions": 946,
+    "memory": {
+      "M1_t0.0": {
+        "vetoes_per_episode": 1.0,
+        "precision": 0.987012987012987,
+        "recall": 0.160676532769556,
+        "false_vetoes_per_episode": 0.012987012987012988
+      },
+      "M1_t0.05": {
+        "vetoes_per_episode": 3.064935064935065,
+        "precision": 0.8771186440677966,
+        "recall": 0.4376321353065539,
+        "false_vetoes_per_episode": 0.37662337662337664
+      },
+      "M2_t0.0": {
+        "vetoes_per_episode": 1.0714285714285714,
+        "precision": 0.9636363636363636,
+        "recall": 0.16807610993657504,
+        "false_vetoes_per_episode": 0.03896103896103896
+      },
+      "M2_t0.05": {
+        "vetoes_per_episode": 3.207792207792208,
+        "precision": 0.8623481781376519,
+        "recall": 0.4503171247357294,
+        "false_vetoes_per_episode": 0.44155844155844154
+      },
+      "M4_t0.0": {
+        "vetoes_per_episode": 1.7142857142857142,
+        "precision": 0.6704545454545454,
+        "recall": 0.18710359408033828,
+        "false_vetoes_per_episode": 0.564935064935065
+      },
+      "M4_t0.05": {
+        "vetoes_per_episode": 4.207792207792208,
+        "precision": 0.6944444444444444,
+        "recall": 0.47568710359408034,
+        "false_vetoes_per_episode": 1.2857142857142858
+      },
+      "M8_t0.0": {
+        "vetoes_per_episode": 6.974025974025974,
+        "precision": 0.24022346368715083,
+        "recall": 0.2727272727272727,
+        "false_vetoes_per_episode": 5.298701298701299
+      },
+      "M8_t0.05": {
+        "vetoes_per_episode": 9.532467532467532,
+        "precision": 0.3508174386920981,
+        "recall": 0.5443974630021141,
+        "false_vetoes_per_episode": 6.188311688311688
+      }
+    }
+  },
+  "etpr1": {
+    "episodes": 154,
+    "forward_steps": 9742,
+    "depth_domain_steps": 7781,
+    "depth_domain_collisions": 503,
+    "memory": {
+      "M1_t0.0": {
+        "vetoes_per_episode": 0.6493506493506493,
+        "precision": 0.99,
+        "recall": 0.19681908548707752,
+        "false_vetoes_per_episode": 0.006493506493506494
+      },
+      "M1_t0.05": {
+        "vetoes_per_episode": 1.2987012987012987,
+        "precision": 0.925,
+        "recall": 0.36779324055666,
+        "false_vetoes_per_episode": 0.09740259740259741
+      },
+      "M2_t0.0": {
+        "vetoes_per_episode": 0.8181818181818182,
+        "precision": 0.8888888888888888,
+        "recall": 0.22266401590457258,
+        "false_vetoes_per_episode": 0.09090909090909091
+      },
+      "M2_t0.05": {
+        "vetoes_per_episode": 1.6103896103896105,
+        "precision": 0.8266129032258065,
+        "recall": 0.40755467196819084,
+        "false_vetoes_per_episode": 0.2792207792207792
+      },
+      "M4_t0.0": {
+        "vetoes_per_episode": 2.655844155844156,
+        "precision": 0.3422982885085575,
+        "recall": 0.2783300198807157,
+        "false_vetoes_per_episode": 1.7467532467532467
+      },
+      "M4_t0.05": {
+        "vetoes_per_episode": 4.461038961038961,
+        "precision": 0.35953420669577874,
+        "recall": 0.49105367793240556,
+        "false_vetoes_per_episode": 2.857142857142857
+      },
+      "M8_t0.0": {
+        "vetoes_per_episode": 13.168831168831169,
+        "precision": 0.09270216962524655,
+        "recall": 0.37375745526838966,
+        "false_vetoes_per_episode": 11.948051948051948
+      },
+      "M8_t0.05": {
+        "vetoes_per_episode": 15.448051948051948,
+        "precision": 0.12526271542664985,
+        "recall": 0.5924453280318092,
+        "false_vetoes_per_episode": 13.512987012987013
+      }
+    }
+  },
+  "streamvln": {
+    "episodes": 154,
+    "forward_steps": 34634,
+    "depth_domain_steps": 10231,
+    "depth_domain_collisions": 6302,
+    "memory": {
+      "M1_t0.0": {
+        "vetoes_per_episode": 13.116883116883116,
+        "precision": 1.0,
+        "recall": 0.32053316407489685,
+        "false_vetoes_per_episode": 0.0
+      },
+      "M1_t0.05": {
+        "vetoes_per_episode": 17.61038961038961,
+        "precision": 0.9918879056047197,
+        "recall": 0.4268486194858775,
+        "false_vetoes_per_episode": 0.14285714285714285
+      },
+      "M2_t0.0": {
+        "vetoes_per_episode": 13.214285714285714,
+        "precision": 0.9936117936117936,
+        "recall": 0.32085052364328787,
+        "false_vetoes_per_episode": 0.08441558441558442
+      },
+      "M2_t0.05": {
+        "vetoes_per_episode": 17.766233766233768,
+        "precision": 0.9853801169590644,
+        "recall": 0.42780069819105043,
+        "false_vetoes_per_episode": 0.2597402597402597
+      },
+      "M4_t0.0": {
+        "vetoes_per_episode": 14.363636363636363,
+        "precision": 0.9254068716094033,
+        "recall": 0.3248175182481752,
+        "false_vetoes_per_episode": 1.0714285714285714
+      },
+      "M4_t0.05": {
+        "vetoes_per_episode": 19.551948051948052,
+        "precision": 0.9070076386582531,
+        "recall": 0.4333544906378927,
+        "false_vetoes_per_episode": 1.8181818181818181
+      },
+      "M8_t0.0": {
+        "vetoes_per_episode": 22.103896103896105,
+        "precision": 0.617508813160987,
+        "recall": 0.3335449063789273,
+        "false_vetoes_per_episode": 8.454545454545455
+      },
+      "M8_t0.05": {
+        "vetoes_per_episode": 27.792207792207794,
+        "precision": 0.6495327102803738,
+        "recall": 0.4411298000634719,
+        "false_vetoes_per_episode": 9.74025974025974
+      }
+    }
+  }
+}

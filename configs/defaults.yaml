@@ -1,0 +1,19 @@
+# Shared by every run. An agent or benchmark config overrides individual keys; nothing
+# here is agent-specific. The fixed vocabulary lives here.
+seed: 20260704
+split: val_unseen
+log:
+  steps: true          # write steps.csv (per-primitive rows)
+  decision_signals: true
+
+# regime -> the literal habitat ALLOW_SLIDING value.
+regimes:
+  block: no_sliding
+  slide: none
+
+# storage roots, expanded from the environment by vlnsafe.config
+paths:
+  datasets: ${VLNSAFE_DATASETS}
+  models: ${VLNSAFE_MODELS}
+  checkpoints: ${VLNSAFE_CHECKPOINTS}
+  scratch: ${VLNSAFE_SCRATCH}

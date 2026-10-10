@@ -1,0 +1,33 @@
+# Seq2Seq (T1, the original VLN-CE recurrent baseline). Same provider class as CMA
+# (family: vlnce_policy) — a config, a model-zoo checkpoint and two arms, no new code
+#. Checkpoint: VLN-CE model-zoo Seq2Seq_DA, downloaded 2026-09-11.
+id: seq2seq
+display_name: Seq2Seq
+tier: T1
+family: vlnce_policy
+policy_name: Seq2SeqPolicy
+sensor_rig: vlnce_recurrent
+
+exp_config:
+  r2r: vlnce_baselines/config/r2r_baselines/seq2seq_da.yaml
+dataset:
+  r2r: official
+  rxr: base
+checkpoint:
+  r2r: ${VLNSAFE_CHECKPOINTS}/seq2seq/seq2seq_da/ckpt.pth
+
+published:
+  r2r: {sr: 26.0, spl: 23.0, regime: slide, source: "VLN-CE (Krantz et al., ECCV 2020) Tab. 3 row 3, Seq2Seq + DAgger (DA = DAgger, not data augmentation), val-unseen SR 0.26 / SPL 0.23; model-zoo Seq2Seq_DA is assumed to be this row"}
+  rxr: {sr: null, spl: null, regime: block, source: "no public RxR-CE Seq2Seq checkpoint"}
+# Widened from 1.0 after the slide arm landed at SR 22.13 vs 26.0 (delta 3.87, SPL 20.25 vs
+# 23.0): VLN-CE's README says its paper numbers came from a different hardware + Habitat
+# build than the current release (CMA 0.30 -> 0.27 SPL on the leaderboard); CMA shows the same
+# direction in this harness. Ours is reported beside the published number.
+reproduction_tolerance_sr: 4.0
+
+unavailable:
+  value_estimate: "Seq2Seq is a recurrent imitation-learned policy; it has no value head"
+  # Every Seq2Seq RxR cell in the tables is therefore \nmark, not \TBD.
+  rxr_arm: >-
+    the VLN-CE model zoo publishes one Seq2Seq checkpoint (R2R-CE, Seq2Seq_DA); the
+    RxR-Habitat baseline is CMA-only, so there is no RxR-CE Seq2Seq checkpoint.

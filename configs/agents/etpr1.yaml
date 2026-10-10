@@ -1,0 +1,47 @@
+# ETP-R1 (T2, ETPNav-lineage, GRPO-tuned). The T2 "current architecture" of the paper.
+# Served by workers/etpnav_worker.py with code_root swapped (docs/agent_notes/etpr1.md §1:
+# subclass, not a fork).
+id: etpr1
+display_name: ETP-R1
+tier: T2
+family: etpnav_worker
+worker_python: $VLNSAFE_ENVS/vlnsafe-etpnav/bin/python
+code_root: external/ETP-R1
+# ETP-R1 registers its own SS trainer (SS-ETP-R1); the worker imports this instead of
+# ETPNav's ss_trainer_ETP. Inference path is otherwise ETPNav's (docs/agent_notes/etpr1.md §1).
+worker_trainer_module: vlnce_baselines.ss_trainer_ETP_R1
+sensor_rig: etpnav_12view
+back_algo: control
+
+# the one signature change vs ETPNav: extract_instruction_tokens / _nav_gmap_variable
+# take a required task_type (1=r2r, 2=rxr). Config field, not a hard-coded literal
+# (docs/agent_notes/etpr1.md §1). Consumed by workers/etpnav_worker.py in Phase D1.
+task_type:
+  r2r: 1
+  rxr: 2
+
+# the ETPNav-lineage config the WORKER loads to build its policy (relative to code_root).
+exp_config:
+  r2r: run_r2r/iter_train.yaml
+  rxr: run_rxr/iter_train.yaml
+# key into configs/benchmarks/<id>.yaml `dataset:` — ETP-R1 reads XLM-R tokens, not the
+# BERTidx pass ETPNav uses (docs/agent_notes/etpr1.md "Extra finding" / "Open question").
+dataset:
+  r2r: xlmr
+  rxr: xlmr
+checkpoint:
+  r2r: ${VLNSAFE_CHECKPOINTS}/etpr1/release_r2r_grpo/store/ckpt.iter270.pth
+  rxr: ${VLNSAFE_CHECKPOINTS}/etpr1/release_rxr_grpo/store/ckpt.iter1320.pth
+pretrained: ${VLNSAFE_MODELS}/etpr1/mlm.sap_habitat_depth/store2/model_step_367500.pt
+
+published:
+  r2r: {sr: 65.0, spl: 56.0, regime: slide, source: "ETP-R1 Tab. 2 (R2R-CE val-unseen)"}
+  rxr: {sr: null, regime: block, source: "ETP-R1 reports no RxR-CE val-unseen number"}
+reproduction_tolerance_sr: 1.0
+
+# every \nmark in the paper is declared here with a reason; analysis/make_tables.py reads it.
+unavailable:
+  value_estimate: >-
+    GRPO is critic-free; the released *_grpo checkpoints expose no value head. Confirmed:
+    the state dict has no critic/value parameters and the repo's Critic class is never
+    instantiated (docs/agent_notes/etpr1.md §3).

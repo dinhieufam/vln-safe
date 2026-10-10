@@ -1,0 +1,88 @@
+key,short_name,year,venue,family,contact_possible,reports_safety_metric,safety_metric,collision_definition,physics_regime_stated,outcome_conditioned,proactive,training_free,plan_aware,std_vlnce_bench,paired_stats,verification,notes
+anderson2018r2r,R2R,2018,CVPR,discrete,N,N,none,na,na,N,na,na,na,N,N,full,Nav-graph teleportation; contact impossible by construction.
+anderson2018spl,SPL,2018,arXiv,metric,N,N,none,na,na,N,na,na,na,N,N,full,Defines SPL; efficiency only.
+jain2019r4r,R4R,2019,ACL,discrete,N,N,none,na,na,N,na,na,na,N,N,full,Path-fidelity motivation (CLS).
+ilharco2019ndtw,nDTW,2019,NeurIPS-W,metric,N,N,none,na,na,N,na,na,na,N,N,full,Path fidelity; no physical notion.
+ma2019regretful,Regretful Agent,2019,CVPR,discrete,N,N,none,na,na,N,na,na,na,N,N,doc,Backtracking as navigation quality; free on a graph.
+ke2019fast,Tactical Rewind (FAST),2019,CVPR,discrete,N,N,none,na,na,N,na,na,na,N,N,doc,Progress-monitor backtracking.
+qi2020reverie,REVERIE,2020,CVPR,discrete,N,N,none,na,na,N,na,na,na,N,N,full,Remote object grounding.
+ku2020rxr,RxR,2020,EMNLP,discrete,N,N,none,na,na,N,na,na,na,N,N,full,Multilingual; pose traces.
+hao2020prevalent,PREVALENT,2020,CVPR,discrete,N,N,none,na,na,N,na,na,na,N,N,doc,Pretraining.
+thomason2020vision,CVDN,2020,CoRL,discrete,N,N,none,na,na,N,na,na,na,N,N,doc,Dialog-based navigation.
+chen2021hamt,HAMT,2021,NeurIPS,discrete,N,N,none,na,na,N,na,na,na,N,N,full,History-aware transformer.
+chen2022duet,DUET,2022,CVPR,discrete,N,N,none,na,na,N,na,na,na,N,N,full,Dual-scale graph transformer.
+wang2023scalevln,ScaleVLN,2023,ICCV,discrete,N,N,none,na,na,N,na,na,na,N,N,doc,Data scaling to ~80 SR.
+hong2025gsa,GSA-VLN,2025,ICLR,discrete,N,N,none,na,na,N,na,na,na,N,N,doc,Scene adaptation; success-only metrics.
+zhou2024navgpt,NavGPT,2024,AAAI,fm-vln,N,N,none,na,na,N,na,Y,Y,N,N,doc,Zero-shot LLM planner on the nav graph.
+chen2024mapgpt,MapGPT,2024,ACL,fm-vln,N,N,none,na,na,N,na,Y,Y,N,N,doc,Map-guided prompting; discrete.
+long2024discussnav,DiscussNav,2024,ICRA,fm-vln,N,N,none,na,na,N,na,Y,Y,N,N,doc,Multi-expert LLM discussion; discrete.
+zhou2024navgpt2,NavGPT-2,2024,ECCV,fm-vln,N,N,none,na,na,N,na,N,Y,N,N,doc,VLM + trained policy hybrid.
+krantz2020vlnce,VLN-CE,2020,ECCV,vlnce,Y,N,none,na,N,N,na,na,na,Y,N,full,Introduces the continuous setting; notes sliding exploitation but reports no safety metric.
+krantz2021waypoint,Waypoint models,2021,ICCV,vlnce,Y,N,none,na,N,N,na,na,na,Y,N,doc,Waypoint prediction + low-level controller.
+hong2022cwp,CWP,2022,CVPR,vlnce,Y,N,none,na,N,N,na,na,na,Y,N,doc,Candidate waypoint predictor trained on nav-graph geometry.
+krantz2022sim2sim,Sim2Sim,2022,ECCV,vlnce,Y,N,none,na,N,N,na,na,na,Y,N,doc,Discrete-to-continuous transfer.
+an2025etpnav,ETPNav,2025,TPAMI,vlnce,Y,N,none,na,Y,N,N,Y,N,Y,N,full,Ships the Tryout escape controller and depth-based waypoint pruning; states the sliding regime but reports no collision metric.
+an2023bevbert,BEVBert,2023,ICCV,vlnce,Y,N,none,na,N,N,na,na,na,Y,N,doc,BEV occupancy implicitly encodes obstacles; no safety metric.
+wang2024hnr,HNR,2024,CVPR,vlnce,Y,N,none,na,N,N,na,na,na,Y,N,doc,Neural-radiance lookahead.
+gao2024fstta,FSTTA,2024,ICML,vlnce,Y,N,none,na,N,N,na,N,na,Y,N,doc,Test-time gradient adaptation; targets success only.
+qiao2025opennav,Open-Nav,2025,ICRA,fm-vln,Y,N,none,na,N,N,na,Y,Y,Y,N,doc,Open-source LLM planner on R2R-CE; assumes a safe low-level controller.
+long2024instructnav,InstructNav,2024,CoRL,fm-vln,Y,N,none,na,N,N,na,Y,Y,N,N,doc,Value maps; zero-shot generalist in Habitat.
+canav,CA-Nav,2025,OpenReview,fm-vln,Y,N,none,na,N,N,na,Y,Y,Y,N,abstract,Constraint-aware zero-shot VLN-CE; constraints are semantic not physical.
+wei2025streamvln,StreamVLN,2025,arXiv,nav-vla,Y,N,none,na,N,N,na,N,na,Y,N,doc,Streaming VLA; success metrics only.
+wei2025dualvln,Dual-System VLN,2025,arXiv,nav-vla,Y,N,none,na,N,N,na,N,na,Y,N,doc,Dual-system foundation model.
+zheng2025efficientvln,Efficient-VLN,2025,arXiv,vlnce,Y,N,none,na,N,N,na,N,na,Y,N,doc,Training-efficiency focus.
+xin2026agentvln,AgentVLN,2026,arXiv,fm-vln,Y,N,none,na,N,N,na,N,Y,Y,N,doc,Agentic VLN.
+xin2026decovln,DecoVLN,2026,arXiv,fm-vln,Y,N,none,na,N,N,na,N,Y,Y,N,doc,Decoupled observation/reasoning/correction; correction is task not safety.
+song2025lhvln,LH-VLN,2025,CVPR,vlnce,Y,N,none,na,N,N,na,N,na,N,N,doc,Long-horizon platform and benchmark.
+zhang2024navid,NaVid,2024,RSS,nav-vla,Y,N,none,na,N,N,na,N,na,Y,N,doc,Video VLM emits low-level VLN-CE actions; sim-to-real.
+zhang2025uninavid,Uni-NaVid,2025,RSS,nav-vla,Y,N,none,na,N,N,na,N,na,Y,N,doc,Unified video VLA.
+cheng2025navila,NaVILA,2025,RSS,nav-vla,Y,N,none,na,N,N,Y,N,N,N,N,doc,Delegates obstacle avoidance to a trained locomotion policy; safety is architectural not measured.
+zhang2025navfom,NavFoM,2025,arXiv,nav-vla,Y,N,none,na,N,N,na,N,na,Y,N,doc,Embodied navigation foundation model.
+wang2026whatlimits,What Limits VLN?,2026,arXiv,analysis,Y,N,none,na,N,N,na,na,na,Y,N,abstract,Argues spatial grounding and perceptual instability are the sim-to-real bottleneck; no collision analysis.
+failureattribution,Where Did It Go Wrong?,2026,arXiv,analysis,Y,N,none,na,N,N,na,na,na,Y,N,abstract,Capability-oriented VLN failure taxonomy; explicitly excludes collisions and safety.
+wang2025vlnpe,VLN-PE,2025,ICCV,analysis,Y,Y,collision/fall events,physics-flag,Y,N,na,na,na,Y,N,abstract,Physical and visual embodied-gap study; surfaces physical failure but does not condition on episode outcome.
+yue2024safevln,Safe-VLN,2024,RA-L,vln-safety,Y,Y,N-C / W-C / D-C,mixed,N,N,N,N,N,Y,N,full,LiDAR-masked waypoint predictor (retrained) plus reactive re-selection after collision; the one dedicated VLN-CE safety paper.
+hong2024obvln,ObVLN,2024,ACM MM,robustness,N,N,blocked-path SR,na,na,N,Y,N,Y,N,N,doc,R2R-UNO obstructions on a discrete graph; fix requires curriculum training.
+li2025havln,HA-VLN 2.0,2025,arXiv,vln-safety,Y,Y,TCR / CR / personal space,human-contact,N,N,Y,N,Y,N,N,abstract,Human-aware VLN; collision notion is restricted to humans; strong agents are trained on the augmented data.
+lin2025vlnverse,VLNVerse,2025,arXiv,benchmark,Y,Y,collision rate,physics-flag,unk,N,na,na,na,Y,N,abstract,Adds a physics-aware collision-rate metric to VLN evaluation.
+sun2025dynamicvln,DynamicVLN,2025,Sensors,vlnce,Y,Y,collision with dynamic objects,physics-flag,unk,N,N,N,Y,N,N,abstract,Dynamic obstacles injected into VLN scenarios.
+wang2025badnaver,BadNAVer,2025,arXiv,adversarial,Y,N,none,na,N,N,na,na,na,N,N,abstract,Jailbreaking VLN agents; adversarial rather than physical safety.
+vlnnf,VLN-NF,2026,arXiv,robustness,Y,N,none,na,N,N,na,na,Y,Y,N,abstract,Feasibility-aware VLN with false-premise instructions; infeasibility is linguistic.
+groundcontrol,GroundControl,2026,arXiv,uncertainty,Y,N,failure-prediction AUC,na,N,N,Y,N,Y,Y,N,abstract,Trajectory-consistent uncertainty anticipates navigation failure; predicts but does not intervene and does not target collisions.
+atena,ATENA,2025,arXiv,uncertainty,Y,N,none,na,N,N,N,N,Y,Y,N,abstract,Active test-time adaptation with calibration; performs online updates.
+uncertaintygaussian,Uncertainty-Aware Gaussian Map,2026,arXiv,uncertainty,Y,N,none,na,N,N,N,N,Y,Y,N,abstract,Injects geometric/semantic uncertainty into the observation space; trained.
+jeong2025care,CARE,2025,CoRL,robot-safety,Y,Y,collision count / dist-before-collision,physics-real,na,N,Y,Y,N,N,N,full,Monocular depth to potential-field trajectory rotation for RGB nav policies; real-robot exploration and image-goal only; no language and no VLN benchmark.
+zhang2025safevla,SafeVLA,2025,NeurIPS,robot-safety,Y,Y,cumulative cost / unsafe-behavior rate,simulator-cost,na,N,Y,N,Y,N,N,full,Safe RL (CMDP) alignment of a VLA on Safety-CHORES; requires full RL training.
+attnvlafilter,Attention-guided VLA filter,2026,arXiv,robot-safety,Y,Y,collision metrics,physics-flag,na,N,Y,Y,Y,N,N,abstract,Inference-time filter reading the VLA's own attention; manipulation not navigation.
+actonwhatyousee,Act on What You See,2026,arXiv,robot-safety,Y,Y,social-safety metrics,mixed,na,N,Y,N,Y,N,N,abstract,Safe social navigation for VLAs; raises the safety-latency trade-off.
+vlasafetysurvey,VLA safety survey,2026,arXiv,survey,na,na,na,na,na,N,na,na,na,N,N,abstract,Taxonomy of VLA threats and inference-time guardrails.
+ames2019cbf,Control Barrier Functions,2019,ECC,robot-safety,Y,Y,safe-set violation,analytic,na,N,Y,Y,N,N,N,full,Minimally invasive QP safety filter; needs known dynamics and a hand-specified barrier.
+latentcbf,Latent CBF,2025,arXiv,robot-safety,Y,Y,safe-set violation,learned,na,N,Y,N,N,N,N,abstract,Barrier certificates learned in a latent image space; the filter itself is trained.
+anysafe,AnySafe,2025,arXiv,robot-safety,Y,Y,safe-set violation,learned,na,N,Y,N,N,N,N,abstract,Runtime-adaptable latent safety filter; trained.
+mpshielding,Model-predictive shielding,2026,arXiv,robot-safety,Y,Y,shield violation rate,analytic,na,N,Y,Y,N,N,N,abstract,Rollout-based veto of unsafe actions; never applied to VLN-CE.
+corsi2026verifiable,Verifiable Foundation Models for Robot Safety,2026,arXiv,robot-safety,Y,Y,verification violation,analytic,na,N,Y,N,N,N,N,abstract,Formal verification wrapper around foundation-model policies.
+doula2025safepath,SafePath,2025,arXiv,robot-safety,Y,Y,conformal risk,learned,na,N,Y,N,Y,N,N,abstract,Conformal prediction for LLM-based navigation; calibration set required.
+garcia2015safe,Safe RL survey,2015,JMLR,survey,na,na,na,na,na,N,na,na,na,N,N,full,Reference taxonomy for safe reinforcement learning.
+ye2025etpr1,ETP-R1,2025,arXiv,vlnce,Y,N,none,na,Y,N,na,na,na,Y,N,doc,ETPNav lineage + GRPO fine-tuning; SOTA R2R-CE 65/56. States that the R2R-CE agent may slide along obstacles and the RxR-CE agent is stopped by collisions; reports no collision metric. Checkpoints on HF. Added 2026-09-09.
+ye2026toporl,Topo-RFT,2026,arXiv,vlnce,Y,N,none,na,N,N,na,na,na,Y,N,doc,Hierarchical MDP over topological frontier macro-actions with graph PPO; R2R-CE 68.1/57.3. Rotate-then-forward controller with tryout; regime not stated. Added 2026-09-09.
+zhang2026qwenrobotnav,Qwen-RobotNav,2026,arXiv,nav-vla,Y,Y,collision rate (tracking benchmark only),physics-flag,N,N,na,na,na,Y,N,doc,Waypoint-trajectory navigation foundation model; R2R-CE 72.1/66.6 (panoramic). Reports a collision rate on EVT-Bench tracking only; none on VLN benchmarks. Added 2026-09-09.
+dang2026rynnbrain,RynnBrain-Nav,2026,arXiv,nav-vla,Y,N,none,na,N,N,na,na,na,Y,N,abstract,Open embodied foundation model family; navigation variant reports R2R-CE 58.6/49.6. Added 2026-09-09.
+zeng2026janusvln,JanusVLN,2026,ICLR,nav-vla,Y,N,none,na,N,N,na,na,na,Y,N,abstract,Dual implicit (spatial-geometric + visual-semantic) memory VLA; RGB video input. Added 2026-09-09.
+bao2026goal2pixel,Goal2Pixel,2026,arXiv,nav-vla,Y,N,none,na,N,N,na,na,na,Y,N,abstract,Grounds goals to navigable pixels converted to 3D waypoints; R2R-CE 54.1/52.5 with 7.75 VLM calls/episode. Added 2026-09-09.
+liu2025navforesee,NavForesee,2025,arXiv,nav-vla,Y,N,none,na,N,N,na,na,na,Y,N,abstract,Unified VL world model with dual-horizon prediction; R2R-CE and RxR-CE. Added 2026-09-09.
+zhu2026navida,NaVIDA,2026,arXiv,nav-vla,Y,N,none,na,N,N,na,na,na,Y,N,abstract,Inverse-dynamics augmentation for a 3B navigation VLA. Added 2026-09-09.
+wang2026livevln,LiveVLN,2026,arXiv,nav-vla,Y,N,none,na,N,N,na,na,na,Y,N,abstract,Overlaps inference with motion to remove stop-and-go; R2R/RxR-CE parity with StreamVLN and NaVIDA. Added 2026-09-09.
+peng2026solnav,SOL-Nav,2026,arXiv,nav-vla,Y,N,none,na,N,N,na,na,na,Y,N,abstract,Structured observation language as VLA input; R2R and RxR. Added 2026-09-09.
+liu2026hamvln,HAM-VLN,2026,arXiv,fm-vln,Y,N,none,na,N,N,na,Y,Y,Y,N,abstract,Zero-shot hierarchical agentic memory over a depth-grounded world graph; 61.0 SR on VLN-CE R2R. Added 2026-09-09.
+li2026oneagent,One Agent (metric world repr.),2026,arXiv,fm-vln,Y,N,none,na,N,N,na,Y,Y,Y,N,abstract,Zero-shot MLLM planner over an interactive metric world representation said to ensure 'physical validity' of actions; 48.8 SR R2R-CE; no collision metric. Added 2026-09-09.
+pan2026o2cnav,O2C-Nav,2026,arXiv,fm-vln,Y,N,none,na,N,N,na,Y,Y,Y,N,abstract,One MLLM call per step over projected spatial-aware waypoints; FMM planner produces 'collision-free' paths but no collision metric reported. Added 2026-09-09.
+li2025obstaclemapvln,Obstacle-map WP zero-shot,2025,arXiv,fm-vln,Y,N,none,na,N,N,na,Y,Y,Y,N,abstract,Abstract obstacle-map waypoint predictor + MLLM with topo-graph/visit-info prompting; 41/36 SR on R2R-CE/RxR-CE. Added 2026-09-09.
+li2026agenticnav,AgenticNav,2026,arXiv,fm-vln,Y,N,none,na,N,N,na,Y,Y,Y,N,abstract,Tool-calling harness: pixel selection + on-demand depth queries; zero-shot SOTA on R2R-CE. Added 2026-09-09.
+deng2026spacevln,SpaceVLN,2026,arXiv,fm-vln,Y,N,none,na,N,N,na,Y,Y,Y,N,abstract,Online spatial cognitive memory + reasoning; zero-shot on R2R-CE/RxR-CE/GN-Bench/HM3D-OVON. Added 2026-09-09.
+jeong2024vlncm,VLN-CM,2024,arXiv,fm-vln,Y,Y,collision count,physics-flag,N,N,Y,Y,N,Y,N,abstract,Zero-shot VLN-CE agent whose distance selector picks a collision-free distance from a depth-derived occupancy mask; reports fewer collisions than baselines. A full agent not a wrapper (plan_aware N). Added 2026-09-09.
+sun2025vil,V2-VLNCE / VIL,2025,RA-L,robustness,Y,N,none,na,N,N,na,na,na,Y,N,abstract,View-invariant post-training for camera-height/angle shifts; R2R-CE and RxR-CE; RA-L 2026. Added 2026-09-09.
+loh2024adavln,AdaVLN,2024,arXiv,benchmark,Y,Y,human-collision events,human-contact,N,N,na,na,na,N,N,abstract,Moving-human extension of R2R-CE (AdaR2R) in a custom Isaac-based simulator; collisions with humans counted. Added 2026-09-09.
+pham2026humanoidvln,HumanoidVLN,2026,arXiv,benchmark,Y,Y,collision-aware episodes,physics-flag,N,N,na,na,na,N,N,abstract,Isaac Sim humanoid-embodiment VLN benchmark with 933 collision-aware episodes; own scenes not R2R-CE. Added 2026-09-09.
+wu2026navverse,NavVerse,2026,arXiv,benchmark,Y,Y,safety metrics,unstated,N,N,na,na,na,N,N,abstract,Indoor-to-outdoor physics-enabled navigation benchmark reporting task success / path efficiency / safety through executable robot interfaces. Added 2026-09-09.
+wang2026touchsafebench,TouchSafeBench,2026,arXiv,uncertainty,Y,Y,collision-grounding Macro-F1,physics-flag,N,N,Y,Y,N,N,N,abstract,Habitat 3.0 benchmark probing whether VLMs can classify current contact and predict imminent collision; below 50% Macro-F1. Closest published analogue of P3 but for VLMs not policies. Added 2026-09-09.
+chen2026alphaadj,AlphaAdj,2026,arXiv,robot-safety,Y,Y,collision-free rate,analytic,na,N,Y,Y,Y,N,N,abstract,VLM-regulated CBF conservativeness for visual navigation; static and dynamic obstacle scenarios not a VLN benchmark. Added 2026-09-09.

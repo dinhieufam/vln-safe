@@ -1,0 +1,36 @@
+# StreamVLN worker env -- the record of what scripts/build_vla_envs.sh produces. That
+# script is authoritative (this file is not `conda env create`-able: the real install is
+# `pip install -r external/StreamVLN/requirements.txt`, a 155-line freeze, plus a prebuilt
+# FlashAttention2 wheel). No habitat: the harness process owns the simulator.
+#
+# Built with `conda --prefix $VLNSAFE_ENVS/vlnsafe-streamvln`, NOT the conda
+# root -- this env is ~5.6 GB.
+# Verified 2026-09-11 by scripts/check_vla_envs.py: model code imports, 0 problems.
+name: vlnsafe-streamvln
+channels: [conda-forge, defaults]
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+      # pinned by external/StreamVLN/requirements.txt @ e48f6ff
+      - torch==2.1.2
+      - torchvision==0.16.2
+      - transformers==4.45.1
+      - tokenizers==0.20.3
+      - accelerate==0.28.0
+      # torch 2.1.2 is built against the numpy 1.x C ABI; numpy 2.x loads but every
+      # array<->tensor conversion fails with "_ARRAY_API not found". Install it LAST --
+      # opencv and several others silently upgrade it.
+      - numpy==1.26.1
+      - opencv-python==4.11.0.86
+      - decord==0.6.0
+      - torch-scatter==2.1.2      # from -f https://data.pyg.org/whl/torch-2.1.2+cu121.html
+      # streamvln_agent.py imports these directly
+      - numpy-quaternion
+      - omegaconf
+      - pillow
+      - einops
+      - depth-camera-filtering @ git+https://github.com/naokiyokoyama/depth_camera_filtering@39d6e2f
+      - clip @ git+https://github.com/openai/CLIP.git@dcba3cb   # needs --no-build-isolation
+      # attn_implementation="flash_attention_2"; prebuilt wheel for this exact triple
+      - flash-attn==2.5.8         # cu122torch2.1cxx11abiFALSE-cp39

@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=40.8.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# The harness runs in py3.6 (habitat-sim 0.1.7). Keep metadata and the code
+# under vlnsafe/ 3.6-compatible; analysis/ and tests/ may use modern Python.
+[project]
+name = "vlnsafe"
+version = "0.1.0"
+description = "VLN-SAFE: a diagnostic benchmark for the physical safety of frozen VLN-CE agents"
+requires-python = ">=3.6"
+dependencies = ["numpy", "pyyaml"]
+
+[project.scripts]
+vlnsafe = "vlnsafe.cli:main"
+
+[tool.setuptools]
+packages = [
+    "vlnsafe",
+    "vlnsafe.simulator",
+    "vlnsafe.agents",
+    "vlnsafe.workers",
+    "vlnsafe.records",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["slow: needs habitat-sim and the MP3D scenes (deselect with -m 'not slow')"]
+addopts = "-ra"

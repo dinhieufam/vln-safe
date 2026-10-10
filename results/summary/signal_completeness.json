@@ -1,0 +1,124 @@
+{
+  "cma": {
+    "r2r": {
+      "combination": {
+        "auroc_combined_in_sample_upper_bound": 0.8023184403699755,
+        "auroc_geometry_alone": 0.7975614408729708,
+        "auroc_internal_entropy_alone": 0.4966490216466604,
+        "combined_minus_geometry_alone": 0.004756999497004699,
+        "logistic_coefficients_standardized": {
+          "entropy_unified_z": -0.13200553363227807,
+          "geometry_score_z": 0.9797526123376006,
+          "intercept": 2.3270635612906716
+        }
+      },
+      "n_decision_steps": 628860,
+      "n_usable_rows": 624924,
+      "regime": "block"
+    }
+  },
+  "etpnav": {
+    "r2r": {
+      "combination": {
+        "auroc_combined_in_sample_upper_bound": 0.7535428379310046,
+        "auroc_geometry_alone": 0.753778362275736,
+        "auroc_internal_entropy_alone": 0.5333825004336956,
+        "combined_minus_geometry_alone": -0.00023552434473139705,
+        "logistic_coefficients_standardized": {
+          "entropy_unified_z": 0.12893325170252315,
+          "geometry_score_z": 1.2474146053828425,
+          "intercept": -1.6061896295483784
+        }
+      },
+      "n_decision_steps": 19728,
+      "n_usable_rows": 19728,
+      "regime": "block"
+    },
+    "rxr": {
+      "combination": {
+        "auroc_combined_in_sample_upper_bound": 0.814359082941469,
+        "auroc_geometry_alone": 0.8191615464469708,
+        "auroc_internal_entropy_alone": 0.5285869653886921,
+        "combined_minus_geometry_alone": -0.004802463505501842,
+        "logistic_coefficients_standardized": {
+          "entropy_unified_z": 0.08100152495512777,
+          "geometry_score_z": 1.3754618248109138,
+          "intercept": 0.789888207231783
+        }
+      },
+      "n_decision_steps": 25788,
+      "n_usable_rows": 25788,
+      "regime": "block"
+    }
+  },
+  "etpr1": {
+    "r2r": {
+      "combination": {
+        "auroc_combined_in_sample_upper_bound": 0.836404377441425,
+        "auroc_geometry_alone": 0.8289763194992484,
+        "auroc_internal_entropy_alone": 0.6613063512804714,
+        "combined_minus_geometry_alone": 0.007428057942176602,
+        "logistic_coefficients_standardized": {
+          "entropy_unified_z": 0.2858022093878701,
+          "geometry_score_z": 1.8583818221222934,
+          "intercept": -2.7272570132527814
+        }
+      },
+      "n_decision_steps": 19687,
+      "n_usable_rows": 19687,
+      "regime": "block"
+    },
+    "rxr": {
+      "combination": {
+        "auroc_combined_in_sample_upper_bound": 0.8047663958838909,
+        "auroc_geometry_alone": 0.8187636194682963,
+        "auroc_internal_entropy_alone": 0.6679103579548389,
+        "combined_minus_geometry_alone": -0.013997223584405472,
+        "logistic_coefficients_standardized": {
+          "entropy_unified_z": 0.5555679997893316,
+          "geometry_score_z": 1.309041157331454,
+          "intercept": 0.649912926798902
+        }
+      },
+      "n_decision_steps": 25909,
+      "n_usable_rows": 25909,
+      "regime": "block"
+    }
+  },
+  "seq2seq": {
+    "r2r": {
+      "combination": {
+        "auroc_combined_in_sample_upper_bound": 0.7883360028995134,
+        "auroc_geometry_alone": 0.7552018025825581,
+        "auroc_internal_entropy_alone": 0.38185304593197583,
+        "combined_minus_geometry_alone": 0.03313420031695535,
+        "logistic_coefficients_standardized": {
+          "entropy_unified_z": -0.5583090214991621,
+          "geometry_score_z": 0.9869831990135375,
+          "intercept": 1.5057818151874873
+        }
+      },
+      "n_decision_steps": 578357,
+      "n_usable_rows": 578357,
+      "regime": "block"
+    }
+  },
+  "streamvln": {
+    "r2r": {
+      "combination": {
+        "auroc_combined_in_sample_upper_bound": 0.733140748030269,
+        "auroc_geometry_alone": 0.6810152013098802,
+        "auroc_internal_entropy_alone": 0.4017371213383685,
+        "combined_minus_geometry_alone": 0.052125546720388716,
+        "logistic_coefficients_standardized": {
+          "entropy_unified_z": -0.5621764835478089,
+          "geometry_score_z": 0.7600778548685523,
+          "intercept": 1.2431263552436234
+        }
+      },
+      "n_decision_steps": 135612,
+      "n_usable_rows": 135612,
+      "regime": "block"
+    }
+  }
+}

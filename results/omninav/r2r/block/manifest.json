@@ -1,0 +1,33 @@
+{
+  "agent": "omninav",
+  "benchmark": "r2r",
+  "checkpoint": "data/checkpoints/omninav/OmniNav_Flow",
+  "command": "vlnsafe/__main__.py run --agent omninav --benchmark r2r --regime block --shards 3 --shard-index 0 --out results/omninav/r2r/block",
+  "dataset_key": "official",
+  "episode_count": 1839,
+  "episode_subset": null,
+  "full_split": true,
+  "gpu": "3",
+  "guard": null,
+  "merged_from": [
+    "manifest.shard0.json",
+    "manifest.shard1.json",
+    "manifest.shard2.json"
+  ],
+  "physics": {
+    "agent_height_m": 1.5,
+    "agent_radius_m": 0.1,
+    "allow_sliding": false,
+    "forward_step_m": 0.25,
+    "habitat_lab_version": "0.1.7",
+    "habitat_sim_version": "0.1.7",
+    "turn_angle_deg": 15
+  },
+  "regime": "block",
+  "seed": 20260704,
+  "shard_index": 0,
+  "shards": 3,
+  "split": "val_unseen",
+  "subsample": null,
+  "tryout": false
+}

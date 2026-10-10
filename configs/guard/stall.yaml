@@ -1,0 +1,11 @@
+# `default` plus the stall veto: a forward from a pose
+# where an executed forward already moved < stall_m is vetoed. The method arms M2/M3 and the
+# M1 re-run use this; `default` stays as landed (M1/M1b).
+threshold_m: 0.05
+max_consecutive_aborts: 3
+max_episode_aborts: 12
+memory_frames: 8
+lookahead_steps: 2
+max_escape_deg: 90.0
+eps: 0.0
+stall_m: 0.01                # < 1 cm moved = stalled; the landed arms' collided forwards move 0.0

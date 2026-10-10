@@ -1,0 +1,9 @@
+# The guard as M1/M1b ran it (2026-09-23/24), before N24 added the episode-level abort
+# budget: `default` minus max_episode_aborts. Kept so those two arms stay reproducible and
+# serve as the "no episode cap" ablation (the 7.5 % livelock tail in M1b).
+threshold_m: 0.05
+max_consecutive_aborts: 3
+memory_frames: 8
+lookahead_steps: 2
+max_escape_deg: 90.0
+eps: 0.0

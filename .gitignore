@@ -216,3 +216,23 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- vln-safe ---
+data/
+external/*/data
+results/**/steps.csv*
+results/**/steps.shard*.csv
+results/**/progress.jsonl
+results/**/*.log
+results/**/pids.txt
+*.pth
+*.pt
+*.safetensors
+*.zip
+results/**/*.shard*.csv
+results/**/*.shard*.json
+outputs/
+tests/fixtures/*.gz
+
+# external/ holds symlinks to the pinned third-party checkouts (scripts/setup_external.sh).
+external/

@@ -1,0 +1,58 @@
+# OmniNav (T1, navigation VLA with a waypoint head; ICLR'26). Qwen2.5-VL-3B + flow-matching
+# action head in its own conda env with no habitat (family: omninav_worker). Each decision
+# predicts 5 waypoints; the first is executed, walked out as turn + forward primitives by
+# the worker (upstream executes it with its own GO_TOWARD_POINT teleport action, which has
+# no engine-collision flag) -- docs/agent_notes/omninav.md.
+# Constants below are read from external/OmniNav @ e8b4859 (infer_r2r_rxr/: eval_r2r.sh,
+# data/r2r_pano.yaml, VLN_CE/habitat_extensions/config/vlnce_task_r2r_pano.yaml,
+# agent/waypoint_agent.py).
+id: omninav
+display_name: OmniNav
+tier: T1
+family: omninav_worker
+worker_python: $VLNSAFE_ENVS/vlnsafe-omninav/bin/python
+code_root: external/OmniNav/infer_r2r_rxr
+sensor_rig: omninav
+# upstream loads torch_dtype="auto" = the checkpoint's bfloat16, flash_attention_2
+precision: bf16
+
+# OmniNav's own eval camera (vlnce_task_r2r_pano.yaml): front / left / right RGB, 720x640,
+# HFOV 110, 1.25 m (its BACK camera is rendered but never read). The agent resizes to
+# 640x569 itself. Upstream is habitat-sim 0.1.7, the harness's version.
+rig:
+  rgb: {width: 720, height: 640, hfov_deg: 110}
+  camera_height_m: 1.25
+
+model:
+  # eval_r2r.sh: FLOW_MATCH=true (default) -- the released OmniNav_Flow checkpoint
+  flow_match: true
+  # waypoint_agent.py: NUM_ACTION_TRUNK 5, NUM_EXCUTE_ACTION_IN_TRUNK 1, the loop takes [0]
+  execute_waypoint: 0
+  # data/r2r_pano.yaml EVAL: STOP after 150 steps, or after 25 steps without moving
+  early_stop_steps: 150
+  early_stop_still: 25
+
+dataset:
+  r2r: official
+  rxr: official
+# ModelScope chongchongjj/OmniNav_Flow @ f73a8d0 (2026-09-11): one checkpoint for r2r, rxr
+# and ovon (README "Flow Matching for r2r, rxr & ovon").
+checkpoint:
+  r2r: ${VLNSAFE_CHECKPOINTS}/omninav/OmniNav_Flow
+  rxr: ${VLNSAFE_CHECKPOINTS}/omninav/OmniNav_Flow
+
+published:
+  r2r: {sr: 69.5, spl: 66.1, regime: slide, source: "OmniNav Tab. 1 (R2R-CE val-unseen, arXiv:2509.25687); upstream ALLOW_SLIDING True"}
+  rxr: {sr: 73.6, spl: 62.0, regime: slide, source: "OmniNav Tab. 1 (RxR-CE val-unseen)"}
+# Upstream runs habitat-sim 0.1.7 like the harness, but executes each waypoint as one
+# continuous move; the harness quantises it to 15 deg / 0.25 m primitives, and does not
+# copy upstream's navmesh recompute for scene oLBMNvg9in8 (EVAL.NAVMESH_TARGET_SCENE) --
+# the environment is the same for every agent. So the VLA tolerance, not ETPNav's.
+reproduction_tolerance_sr: 2.0
+
+unavailable:
+  value_estimate: "waypoint regression / flow-matching head; no value head"
+  action_probabilities: >-
+    no categorical over STOP/forward/left/right: OmniNav regresses continuous waypoints.
+    The only internal read-out is the per-waypoint arrive value (stop_prob = the minimum
+    of the five, the quantity its stop rule thresholds).

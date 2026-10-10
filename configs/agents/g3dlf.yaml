@@ -1,0 +1,43 @@
+# g3D-LF (T2, ETPNav-lineage, CVPR 2025) — replaces the HNR row (HNR's
+# lookahead navigation model was never released; g3D-LF is its released successor by the
+# same author). Its `Lookahead_3DFF` is an ETPNav fork plus a 3D-language feature field
+# that renders panoramic features at the two most probable candidates for a lookahead
+# re-score. Served by workers/g3dlf_worker.py (a subclass of the ETPNav engine), so it
+# shares the etpnav_worker family's provider, occupancy payload and decomposition.
+# Constants read from external/g3D-LF @ 9338aa5 — see docs/agent_notes/g3dlf.md.
+id: g3dlf
+display_name: g3D-LF
+tier: T2
+family: etpnav_worker
+worker_module: vlnsafe.workers.g3dlf_worker
+# its own env: vlnsafe-etpnav + tinycudann, torch_kdtree, open3d, clip deps
+worker_python: $VLNSAFE_ENVS/vlnsafe-g3dlf/bin/python
+code_root: external/g3D-LF/Lookahead_3DFF
+worker_trainer_module: vlnce_baselines.ss_trainer_ETP   # registers SS-ETP (the fork's own)
+sensor_rig: etpnav_12view
+back_algo: control
+# the 12 RGB views are 336x336 (CLIP ViT-L/14@336; Lookahead_3DFF/run_r2r/r2r_vlnce.yaml);
+# depth stays the benchmark's 256.
+rig:
+  rgb: {width: 336, height: 336}
+
+exp_config:
+  r2r: run_r2r/iter_train.yaml
+dataset:
+  r2r: bert                      # R2R_VLNCE_v1-2_preprocessed_BERTidx, as ETPNav
+checkpoint:
+  r2r: ${VLNSAFE_CHECKPOINTS}/g3dlf/Lookahead_3DFF/data/logs/checkpoints/release_r2r/ckpt.iter25000.pth
+pretrained:
+  r2r: ${VLNSAFE_CHECKPOINTS}/g3dlf/Lookahead_3DFF/pretrained/r2r_ce/mlm.sap_habitat_depth/ckpts/model_step_100000.pt
+
+published:
+  r2r: {sr: 61.0, spl: 52.0, regime: slide, source: "g3D-LF Tab. 2 panorama (R2R-CE val-unseen); run_r2r/main.bash evals with ALLOW_SLIDING True"}
+# upstream evaluated on habitat-sim 0.2.1 (environment.yml), the harness runs 0.1.7:
+# the VLA tolerance, not the ETPNav-family 1.0.
+reproduction_tolerance_sr: 2.0
+
+unavailable:
+  value_estimate: "topological planner with a lookahead re-score; the released checkpoint has no value head"
+  rxr_arm: >-
+    g3D-LF releases only an R2R-CE Lookahead_3DFF checkpoint (HF MrZihanWang/g3D-LF,
+    Lookahead_3DFF/data/logs/checkpoints/release_r2r); there is no RxR-CE one.

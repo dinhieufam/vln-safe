@@ -1,0 +1,32 @@
+# NaVILA worker env -- the record of what scripts/build_vla_envs.sh produces. That script
+# is authoritative (the real install is `pip install -e external/NaVILA`, whose pyproject
+# carries the pins below, plus a FlashAttention2 wheel and a transformers source patch).
+# No habitat: the harness process owns the simulator.
+#
+# Built with `conda --prefix $VLNSAFE_ENVS/vlnsafe-navila`, NOT the conda root
+# -- this env is ~8 GB.
+# Verified 2026-09-11 by scripts/check_vla_envs.py: model code imports, 0 problems.
+name: vlnsafe-navila
+channels: [conda-forge, defaults]
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      # pinned by external/NaVILA/pyproject.toml @ 76b98f2
+      - torch==2.3.0
+      - torchvision==0.18.0
+      - transformers==4.37.2
+      - accelerate==0.27.2
+      - numpy==1.26.0            # install LAST, as above
+      - sentencepiece==0.1.99
+      - timm==0.9.12
+      - einops==0.6.1
+      - einops-exts==0.0.4
+      - decord==0.6.0
+      - pydantic<2,>=1
+      # llava.model.builder -> llava.train.utils -> sequence_parallel -> deepspeed.comm,
+      # so even inference needs the [train] extra's deepspeed. ninja/wandb are not needed.
+      - deepspeed==0.9.5
+      - flash-attn==2.5.8        # cu122torch2.3cxx11abiFALSE-cp310
+# After install, environment_setup.sh copies llava/train/transformers_replace/* over the
+# installed transformers. NaVILA PATCHES transformers; the model will not load without it.

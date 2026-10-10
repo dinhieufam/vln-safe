@@ -1,0 +1,46 @@
+{
+  "agent": "etpr1",
+  "benchmark": "r2r",
+  "checkpoint": "data/checkpoints/etpr1/release_r2r_grpo/store/ckpt.iter270.pth",
+  "command": "vlnsafe/__main__.py run --agent etpr1 --benchmark r2r --regime block --shards 3 --shard-index 0 --out results/etpr1/r2r/block_guard-depth-mem1 --guard depth-mem1",
+  "dataset_key": "xlmr",
+  "episode_count": 1839,
+  "episode_subset": null,
+  "full_split": true,
+  "gpu": "4",
+  "guard": {
+    "config": {
+      "eps": 0.0,
+      "lookahead_steps": 2,
+      "max_consecutive_aborts": 3,
+      "max_episode_aborts": 12,
+      "max_escape_deg": 90.0,
+      "memory_frames": 1,
+      "threshold_m": 0.05
+    },
+    "exempt_guard_redecisions": false,
+    "mode": "manoeuvre",
+    "name": "depth-mem1"
+  },
+  "merged_from": [
+    "manifest.shard0.json",
+    "manifest.shard1.json",
+    "manifest.shard2.json"
+  ],
+  "physics": {
+    "agent_height_m": 1.5,
+    "agent_radius_m": 0.1,
+    "allow_sliding": false,
+    "forward_step_m": 0.25,
+    "habitat_lab_version": "0.1.7",
+    "habitat_sim_version": "0.1.7",
+    "turn_angle_deg": 15
+  },
+  "regime": "block",
+  "seed": 20260704,
+  "shard_index": 0,
+  "shards": 3,
+  "split": "val_unseen",
+  "subsample": null,
+  "tryout": false
+}

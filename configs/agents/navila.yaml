@@ -1,0 +1,50 @@
+# NaVILA (T1, navigation VLA). 8B Llama-3 VILA model in its own conda env with no habitat
+# (family: navila_worker). Output is a sentence ("The next action is move forward 75 cm")
+# parsed by workers/navila_worker.py::parse_navila_sentence into the queued chunk
+#. Its P3/P4 belong to the released per-agent report, not the paper tables.
+# Constants below are read from external/NaVILA @ 76b98f2 (evaluation/habitat_extensions/
+# config/vlnce_task.yaml, evaluation/vlnce_baselines/navila_trainer.py).
+id: navila
+display_name: NaVILA
+tier: T1
+family: navila_worker
+worker_python: $VLNSAFE_ENVS/vlnsafe-navila/bin/python
+code_root: external/NaVILA
+sensor_rig: navila
+precision: bf16
+
+# NaVILA's own eval camera: RGB 512x512 HFOV 90, depth 256x256 -- the two differ, which is
+# why the rig block sizes them separately. Its eval runs on VLN-CE/habitat-lab 0.1.x, the
+# same generation as our harness, so these transfer directly.
+rig:
+  rgb:   {width: 512, height: 512, hfov_deg: 90}
+  depth: {width: 256, height: 256}
+
+# the 8-frame video history the eval loop samples (navila_trainer.py::sample_and_pad_images)
+model:
+  num_frames: 8
+  conv_type: llama_3
+
+exp_config:
+  r2r: evaluation/vlnce_baselines/config/r2r_baselines/navila.yaml
+  rxr: evaluation/vlnce_baselines/config/rxr_baselines/navila.yaml
+dataset:
+  r2r: official
+  rxr: base
+checkpoint:
+  r2r: ${VLNSAFE_CHECKPOINTS}/navila/navila-llama3-8b-8f
+  rxr: ${VLNSAFE_CHECKPOINTS}/navila/navila-llama3-8b-8f
+
+published:
+  r2r: {sr: 54.0, spl: 49.0, regime: slide, source: "NaVILA Tab. 4 (R2R-CE val-unseen)"}
+  rxr: {sr: null, regime: block, source: "reported on RxR-CE, split differs"}
+reproduction_tolerance_sr: 2.0
+
+# the verb-token grouping for the P3 categorical is a modelling choice recorded in
+# docs/agent_notes/navila.md.
+unavailable:
+  value_estimate: "autoregressive language-model policy; no value head"
+  predicted_clearance_m: >-
+    no NaVILA arm exists (cut: 29 h on 2 shards), so there is nothing to
+    predict a clearance for. The external predictor is agent-agnostic (vlnsafe/
+    clearance_predictor.py) and would apply if an arm were ever run.

@@ -1,0 +1,1021 @@
+{
+  "cma": {
+    "r2r": {
+      "collision_streaks": {
+        "mean_event_length_steps": 82.50366601825527,
+        "n_episodes": 1839,
+        "n_episodes_with_collision": 1369,
+        "streak_continuation_fraction": 0.9878793264801259,
+        "total_collision_events": 6683,
+        "total_collision_steps": 551372
+      },
+      "geometry_available": true,
+      "n_decision_steps": 628860,
+      "n_rows": 628860,
+      "operating_points": {
+        "0.01": {
+          "actual_flag_rate": 0.01015488343987533,
+          "lead_time": {
+            "detection_rate": 0.008379470297770463,
+            "distribution_primitive_steps": {
+              "histogram_primitive_steps": {
+                "0": 56,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5+": 0
+              },
+              "max": 0.0,
+              "mean": 0.0,
+              "median": 0.0,
+              "min": 0.0,
+              "n": 56,
+              "p25": 0.0,
+              "p75": 0.0
+            },
+            "n_detected": 56,
+            "n_events": 6683
+          },
+          "n_flagged": 6386,
+          "precision_by_horizon": {
+            "1": {
+              "base_rate": 0.8786073211843654,
+              "precision": 1.0,
+              "recall": 0.011557931734721395
+            },
+            "3": {
+              "base_rate": 0.8935279712495627,
+              "precision": 1.0,
+              "recall": 0.011364930664312765
+            },
+            "5": {
+              "base_rate": 0.899546798969564,
+              "precision": 1.0,
+              "recall": 0.011288888417487347
+            }
+          },
+          "threshold_clearance_m": -0.0673044345514563,
+          "threshold_geometry_score": 0.0673044345514563
+        },
+        "0.05": {
+          "actual_flag_rate": 0.051800082689310814,
+          "lead_time": {
+            "detection_rate": 0.03576238216369894,
+            "distribution_primitive_steps": {
+              "histogram_primitive_steps": {
+                "0": 239,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5+": 0
+              },
+              "max": 0.0,
+              "mean": 0.0,
+              "median": 0.0,
+              "min": 0.0,
+              "n": 239,
+              "p25": 0.0,
+              "p75": 0.0
+            },
+            "n_detected": 239,
+            "n_events": 6683
+          },
+          "n_flagged": 32575,
+          "precision_by_horizon": {
+            "1": {
+              "base_rate": 0.8786073211843654,
+              "precision": 1.0,
+              "recall": 0.05895703511721726
+            },
+            "3": {
+              "base_rate": 0.8935279712495627,
+              "precision": 1.0,
+              "recall": 0.057972536233947436
+            },
+            "5": {
+              "base_rate": 0.899546798969564,
+              "precision": 1.0,
+              "recall": 0.057584644566183896
+            }
+          },
+          "threshold_clearance_m": -0.0323169149639291,
+          "threshold_geometry_score": 0.0323169149639291
+        },
+        "0.1": {
+          "actual_flag_rate": 0.09985529370607131,
+          "lead_time": {
+            "detection_rate": 0.11207541523267993,
+            "distribution_primitive_steps": {
+              "histogram_primitive_steps": {
+                "0": 749,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5+": 0
+              },
+              "max": 0.0,
+              "mean": 0.0,
+              "median": 0.0,
+              "min": 0.0,
+              "n": 749,
+              "p25": 0.0,
+              "p75": 0.0
+            },
+            "n_detected": 749,
+            "n_events": 6683
+          },
+          "n_flagged": 62795,
+          "precision_by_horizon": {
+            "1": {
+              "base_rate": 0.8786073211843654,
+              "precision": 0.9999840751652201,
+              "recall": 0.11364997891482857
+            },
+            "3": {
+              "base_rate": 0.8935279712495627,
+              "precision": 1.0,
+              "recall": 0.11175396509012216
+            },
+            "5": {
+              "base_rate": 0.899546798969564,
+              "precision": 1.0,
+              "recall": 0.11100622426810491
+            }
+          },
+          "threshold_clearance_m": -0.0159404972653299,
+          "threshold_geometry_score": 0.0159404972653299
+        }
+      },
+      "regime": "block"
+    }
+  },
+  "etpnav": {
+    "r2r": {
+      "collision_streaks": {
+        "mean_event_length_steps": 9.792572006063669,
+        "n_episodes": 1839,
+        "n_episodes_with_collision": 1005,
+        "streak_continuation_fraction": 0.8978817822957249,
+        "total_collision_events": 3958,
+        "total_collision_steps": 38759
+      },
+      "geometry_available": true,
+      "n_decision_steps": 19728,
+      "n_rows": 162969,
+      "operating_points": {
+        "0.01": {
+          "actual_flag_rate": 0.011557177615571776,
+          "lead_time": {
+            "detection_rate": 0.00025265285497726126,
+            "distribution_primitive_steps": {
+              "histogram_primitive_steps": {
+                "0": 1,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5+": 0
+              },
+              "max": 0.0,
+              "mean": 0.0,
+              "median": 0.0,
+              "min": 0.0,
+              "n": 1,
+              "p25": 0.0,
+              "p75": 0.0
+            },
+            "n_detected": 1,
+            "n_events": 3958
+          },
+          "n_flagged": 228,
+          "precision_by_horizon": {
+            "1": {
+              "base_rate": 0.220904298459043,
+              "precision": 1.0,
+              "recall": 0.05231757687012391
+            },
+            "3": {
+              "base_rate": 0.32496958637469586,
+              "precision": 1.0,
+              "recall": 0.035563874590547495
+            },
+            "5": {
+              "base_rate": 0.3425081103000811,
+              "precision": 1.0,
+              "recall": 0.03374278525973065
+            }
+          },
+          "threshold_clearance_m": -0.014624359446034,
+          "threshold_geometry_score": 0.014624359446034
+        },
+        "0.05": {
+          "actual_flag_rate": 0.05068937550689376,
+          "lead_time": {
+            "detection_rate": 0.04850934815563416,
+            "distribution_primitive_steps": {
+              "histogram_primitive_steps": {
+                "0": 5,
+                "1": 24,
+                "2": 9,
+                "3": 8,
+                "4": 1,
+                "5+": 145
+              },
+              "max": 92.0,
+              "mean": 24.541666666666668,
+              "median": 21.0,
+              "min": 0.0,
+              "n": 192,
+              "p25": 5.0,
+              "p75": 40.25
+            },
+            "n_detected": 192,
+            "n_events": 3958
+          },
+          "n_flagged": 1000,
+          "precision_by_horizon": {
+            "1": {
+              "base_rate": 0.220904298459043,
+              "precision": 0.745,
+              "recall": 0.17094997705369436
+            },
+            "3": {
+              "base_rate": 0.32496958637469586,
+              "precision": 0.887,
+              "recall": 0.13835595070971768
+            },
+            "5": {
+              "base_rate": 0.3425081103000811,
+              "precision": 0.898,
+              "recall": 0.1328992156282374
+            }
+          },
+          "threshold_clearance_m": 0.0187139418939494,
+          "threshold_geometry_score": -0.0187139418939494
+        },
+        "0.1": {
+          "actual_flag_rate": 0.10026358475263585,
+          "lead_time": {
+            "detection_rate": 0.1023244062657908,
+            "distribution_primitive_steps": {
+              "histogram_primitive_steps": {
+                "0": 6,
+                "1": 49,
+                "2": 35,
+                "3": 14,
+                "4": 10,
+                "5+": 291
+              },
+              "max": 121.0,
+              "mean": 25.0,
+              "median": 17.0,
+              "min": 0.0,
+              "n": 405,
+              "p25": 3.0,
+              "p75": 40.0
+            },
+            "n_detected": 405,
+            "n_events": 3958
+          },
+          "n_flagged": 1978,
+          "precision_by_horizon": {
+            "1": {
+              "base_rate": 0.220904298459043,
+              "precision": 0.6632962588473206,
+              "recall": 0.3010555300596604
+            },
+            "3": {
+              "base_rate": 0.32496958637469586,
+              "precision": 0.8043478260869565,
+              "recall": 0.24816721260333802
+            },
+            "5": {
+              "base_rate": 0.3425081103000811,
+              "precision": 0.8185035389282103,
+              "recall": 0.23960337427852596
+            }
+          },
+          "threshold_clearance_m": 0.0426359001093343,
+          "threshold_geometry_score": -0.0426359001093343
+        }
+      },
+      "regime": "block"
+    },
+    "rxr": {
+      "collision_streaks": {
+        "mean_event_length_steps": null,
+        "n_episodes": 1223,
+        "n_episodes_with_collision": 1084,
+        "streak_continuation_fraction": 1.0,
+        "total_collision_events": 0,
+        "total_collision_steps": 101136
+      },
+      "geometry_available": true,
+      "n_decision_steps": 25788,
+      "n_rows": 165886,
+      "operating_points": {
+        "0.01": {
+          "actual_flag_rate": 0.010159764231425469,
+          "lead_time": {
+            "detection_rate": 0.0,
+            "distribution_primitive_steps": null,
+            "n_detected": 0,
+            "n_events": 3935
+          },
+          "n_flagged": 262,
+          "precision_by_horizon": {
+            "1": {
+              "base_rate": 0.6721343260431208,
+              "precision": 1.0,
+              "recall": 0.015115675301448105
+            },
+            "3": {
+              "base_rate": 0.7157980456026058,
+              "precision": 1.0,
+              "recall": 0.014193618289181429
+            },
+            "5": {
+              "base_rate": 0.7447262292539165,
+              "precision": 1.0,
+              "recall": 0.013642280656079146
+            }
+          },
+          "threshold_clearance_m": -0.1589762039583713,
+          "threshold_geometry_score": 0.1589762039583713
+        },
+        "0.05": {
+          "actual_flag_rate": 0.05056615480068249,
+          "lead_time": {
+            "detection_rate": 0.0,
+            "distribution_primitive_steps": null,
+            "n_detected": 0,
+            "n_events": 3935
+          },
+          "n_flagged": 1304,
+          "precision_by_horizon": {
+            "1": {
+              "base_rate": 0.6721343260431208,
+              "precision": 1.0,
+              "recall": 0.07523221600415393
+            },
+            "3": {
+              "base_rate": 0.7157980456026058,
+              "precision": 1.0,
+              "recall": 0.07064304675226177
+            },
+            "5": {
+              "base_rate": 0.7447262292539165,
+              "precision": 1.0,
+              "recall": 0.06789898463941682
+            }
+          },
+          "threshold_clearance_m": -0.104197625367011,
+          "threshold_geometry_score": 0.104197625367011
+        },
+        "0.1": {
+          "actual_flag_rate": 0.10004653327128897,
+          "lead_time": {
+            "detection_rate": 0.0005082592121982211,
+            "distribution_primitive_steps": {
+              "histogram_primitive_steps": {
+                "0": 2,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5+": 0
+              },
+              "max": 0.0,
+              "mean": 0.0,
+              "median": 0.0,
+              "min": 0.0,
+              "n": 2,
+              "p25": 0.0,
+              "p75": 0.0
+            },
+            "n_detected": 2,
+            "n_events": 3935
+          },
+          "n_flagged": 2580,
+          "precision_by_horizon": {
+            "1": {
+              "base_rate": 0.6721343260431208,
+              "precision": 1.0,
+              "recall": 0.14884901632723707
+            },
+            "3": {
+              "base_rate": 0.7157980456026058,
+              "precision": 1.0,
+              "recall": 0.1397692182675118
+            },
+            "5": {
+              "base_rate": 0.7447262292539165,
+              "precision": 1.0,
+              "recall": 0.13434001562093204
+            }
+          },
+          "threshold_clearance_m": -0.0699454680624191,
+          "threshold_geometry_score": 0.0699454680624191
+        }
+      },
+      "regime": "block"
+    }
+  },
+  "etpr1": {
+    "r2r": {
+      "collision_streaks": {
+        "mean_event_length_steps": 6.974691487136583,
+        "n_episodes": 1839,
+        "n_episodes_with_collision": 1079,
+        "streak_continuation_fraction": 0.8566244826965753,
+        "total_collision_events": 4781,
+        "total_collision_steps": 33346
+      },
+      "geometry_available": true,
+      "n_decision_steps": 19687,
+      "n_rows": 205144,
+      "operating_points": {
+        "0.01": {
+          "actual_flag_rate": 0.01097170721796109,
+          "lead_time": {
+            "detection_rate": 0.0008366450533361222,
+            "distribution_primitive_steps": {
+              "histogram_primitive_steps": {
+                "0": 3,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5+": 1
+              },
+              "max": 6.0,
+              "mean": 1.5,
+              "median": 0.0,
+              "min": 0.0,
+              "n": 4,
+              "p25": 0.0,
+              "p75": 1.5
+            },
+            "n_detected": 4,
+            "n_events": 4781
+          },
+          "n_flagged": 216,
+          "precision_by_horizon": {
+            "1": {
+              "base_rate": 0.13780667445522427,
+              "precision": 0.9814814814814815,
+              "recall": 0.07814227792112054
+            },
+            "3": {
+              "base_rate": 0.22319296998018998,
+              "precision": 0.9814814814814815,
+              "recall": 0.048247610377787895
+            },
+            "5": {
+              "base_rate": 0.24437446030375376,
+              "precision": 0.9814814814814815,
+              "recall": 0.04406568281022656
+            }
+          },
+          "threshold_clearance_m": -0.0085560280827653,
+          "threshold_geometry_score": 0.0085560280827653
+        },
+        "0.05": {
+          "actual_flag_rate": 0.05013460659318332,
+          "lead_time": {
+            "detection_rate": 0.05124450951683748,
+            "distribution_primitive_steps": {
+              "histogram_primitive_steps": {
+                "0": 4,
+                "1": 36,
+                "2": 10,
+                "3": 19,
+                "4": 3,
+                "5+": 173
+              },
+              "max": 112.0,
+              "mean": 22.420408163265307,
+              "median": 17.0,
+              "min": 0.0,
+              "n": 245,
+              "p25": 3.0,
+              "p75": 35.0
+            },
+            "n_detected": 245,
+            "n_events": 4781
+          },
+          "n_flagged": 987,
+          "precision_by_horizon": {
+            "1": {
+              "base_rate": 0.13780667445522427,
+              "precision": 0.6139817629179332,
+              "recall": 0.2233689642462219
+            },
+            "3": {
+              "base_rate": 0.22319296998018998,
+              "precision": 0.7446808510638298,
+              "recall": 0.16727355484751935
+            },
+            "5": {
+              "base_rate": 0.24437446030375376,
+              "precision": 0.7760891590678825,
+              "recall": 0.15921845770110163
+            }
+          },
+          "threshold_clearance_m": 0.0253195914452325,
+          "threshold_geometry_score": -0.0253195914452325
+        },
+        "0.1": {
+          "actual_flag_rate": 0.10001523848224717,
+          "lead_time": {
+            "detection_rate": 0.14348462664714495,
+            "distribution_primitive_steps": {
+              "histogram_primitive_steps": {
+                "0": 5,
+                "1": 101,
+                "2": 36,
+                "3": 32,
+                "4": 15,
+                "5+": 497
+              },
+              "max": 186.0,
+              "mean": 30.520408163265305,
+              "median": 19.0,
+              "min": 0.0,
+              "n": 686,
+              "p25": 3.0,
+              "p75": 44.0
+            },
+            "n_detected": 686,
+            "n_events": 4781
+          },
+          "n_flagged": 1969,
+          "precision_by_horizon": {
+            "1": {
+              "base_rate": 0.13780667445522427,
+              "precision": 0.46368715083798884,
+              "recall": 0.33652782897161815
+            },
+            "3": {
+              "base_rate": 0.22319296998018998,
+              "precision": 0.6353478923311325,
+              "recall": 0.2847064178425125
+            },
+            "5": {
+              "base_rate": 0.24437446030375376,
+              "precision": 0.6658202133062469,
+              "recall": 0.27250051964248595
+            }
+          },
+          "threshold_clearance_m": 0.047172670278998026,
+          "threshold_geometry_score": -0.047172670278998026
+        }
+      },
+      "regime": "block"
+    },
+    "rxr": {
+      "collision_streaks": {
+        "mean_event_length_steps": 22.475153165418654,
+        "n_episodes": 1223,
+        "n_episodes_with_collision": 1088,
+        "streak_continuation_fraction": 0.9555064211291495,
+        "total_collision_events": 4407,
+        "total_collision_steps": 99048
+      },
+      "geometry_available": true,
+      "n_decision_steps": 25909,
+      "n_rows": 168396,
+      "operating_points": {
+        "0.01": {
+          "actual_flag_rate": 0.010305299316839708,
+          "lead_time": {
+            "detection_rate": 0.0,
+            "distribution_primitive_steps": null,
+            "n_detected": 0,
+            "n_events": 4407
+          },
+          "n_flagged": 267,
+          "precision_by_horizon": {
+            "1": {
+              "base_rate": 0.6409741788567679,
+              "precision": 1.0,
+              "recall": 0.016077557656409946
+            },
+            "3": {
+              "base_rate": 0.6868655679493613,
+              "precision": 1.0,
+              "recall": 0.015003371544167228
+            },
+            "5": {
+              "base_rate": 0.7139989964877069,
+              "precision": 1.0,
+              "recall": 0.014433212606086815
+            }
+          },
+          "threshold_clearance_m": -0.1477509690068058,
+          "threshold_geometry_score": 0.1477509690068058
+        },
+        "0.05": {
+          "actual_flag_rate": 0.050098421397969814,
+          "lead_time": {
+            "detection_rate": 0.0004538234626730202,
+            "distribution_primitive_steps": {
+              "histogram_primitive_steps": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5+": 2
+              },
+              "max": 21.0,
+              "mean": 13.0,
+              "median": 13.0,
+              "min": 5.0,
+              "n": 2,
+              "p25": 9.0,
+              "p75": 17.0
+            },
+            "n_detected": 2,
+            "n_events": 4407
+          },
+          "n_flagged": 1298,
+          "precision_by_horizon": {
+            "1": {
+              "base_rate": 0.6409741788567679,
+              "precision": 1.0,
+              "recall": 0.07815981212741616
+            },
+            "3": {
+              "base_rate": 0.6868655679493613,
+              "precision": 1.0,
+              "recall": 0.07293773881771184
+            },
+            "5": {
+              "base_rate": 0.7139989964877069,
+              "precision": 1.0,
+              "recall": 0.07016595491648198
+            }
+          },
+          "threshold_clearance_m": -0.0969939761222114,
+          "threshold_geometry_score": 0.0969939761222114
+        },
+        "0.1": {
+          "actual_flag_rate": 0.10038982592921379,
+          "lead_time": {
+            "detection_rate": 0.0009076469253460404,
+            "distribution_primitive_steps": {
+              "histogram_primitive_steps": {
+                "0": 2,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5+": 2
+              },
+              "max": 21.0,
+              "mean": 6.5,
+              "median": 2.5,
+              "min": 0.0,
+              "n": 4,
+              "p25": 0.0,
+              "p75": 9.0
+            },
+            "n_detected": 4,
+            "n_events": 4407
+          },
+          "n_flagged": 2601,
+          "precision_by_horizon": {
+            "1": {
+              "base_rate": 0.6409741788567679,
+              "precision": 1.0,
+              "recall": 0.15662070211356657
+            },
+            "3": {
+              "base_rate": 0.6868655679493613,
+              "precision": 1.0,
+              "recall": 0.1461564396493594
+            },
+            "5": {
+              "base_rate": 0.7139989964877069,
+              "precision": 1.0,
+              "recall": 0.14060219471322774
+            }
+          },
+          "threshold_clearance_m": -0.0679821442804764,
+          "threshold_geometry_score": 0.0679821442804764
+        }
+      },
+      "regime": "block"
+    }
+  },
+  "seq2seq": {
+    "r2r": {
+      "collision_streaks": {
+        "mean_event_length_steps": 47.98238684884714,
+        "n_episodes": 1839,
+        "n_episodes_with_collision": 1322,
+        "streak_continuation_fraction": 0.9791590192636691,
+        "total_collision_events": 9368,
+        "total_collision_steps": 449499
+      },
+      "geometry_available": true,
+      "n_decision_steps": 578357,
+      "n_rows": 578357,
+      "operating_points": {
+        "0.01": {
+          "actual_flag_rate": 0.01048487352967112,
+          "lead_time": {
+            "detection_rate": 0.022843723313407345,
+            "distribution_primitive_steps": {
+              "histogram_primitive_steps": {
+                "0": 214,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5+": 0
+              },
+              "max": 0.0,
+              "mean": 0.0,
+              "median": 0.0,
+              "min": 0.0,
+              "n": 214,
+              "p25": 0.0,
+              "p75": 0.0
+            },
+            "n_detected": 214,
+            "n_events": 9368
+          },
+          "n_flagged": 6064,
+          "precision_by_horizon": {
+            "1": {
+              "base_rate": 0.7771998955662334,
+              "precision": 1.0,
+              "recall": 0.013490575062458427
+            },
+            "3": {
+              "base_rate": 0.8051099926170169,
+              "precision": 1.0,
+              "recall": 0.01302290820610728
+            },
+            "5": {
+              "base_rate": 0.8155568273574972,
+              "precision": 1.0,
+              "recall": 0.012856091909184771
+            }
+          },
+          "threshold_clearance_m": -0.0489216288435114,
+          "threshold_geometry_score": 0.0489216288435114
+        },
+        "0.05": {
+          "actual_flag_rate": 0.050074607897890054,
+          "lead_time": {
+            "detection_rate": 0.042485055508112726,
+            "distribution_primitive_steps": {
+              "histogram_primitive_steps": {
+                "0": 398,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5+": 0
+              },
+              "max": 0.0,
+              "mean": 0.0,
+              "median": 0.0,
+              "min": 0.0,
+              "n": 398,
+              "p25": 0.0,
+              "p75": 0.0
+            },
+            "n_detected": 398,
+            "n_events": 9368
+          },
+          "n_flagged": 28961,
+          "precision_by_horizon": {
+            "1": {
+              "base_rate": 0.7771998955662334,
+              "precision": 0.9952349711681227,
+              "recall": 0.0641225008287004
+            },
+            "3": {
+              "base_rate": 0.8051099926170169,
+              "precision": 0.9999309416111322,
+              "recall": 0.062191688446678876
+            },
+            "5": {
+              "base_rate": 0.8155568273574972,
+              "precision": 0.9999309416111322,
+              "recall": 0.061395047097308995
+            }
+          },
+          "threshold_clearance_m": -0.018655055473619,
+          "threshold_geometry_score": 0.018655055473619
+        },
+        "0.1": {
+          "actual_flag_rate": 0.1001924416925878,
+          "lead_time": {
+            "detection_rate": 0.10023484201537147,
+            "distribution_primitive_steps": {
+              "histogram_primitive_steps": {
+                "0": 933,
+                "1": 4,
+                "2": 0,
+                "3": 1,
+                "4": 0,
+                "5+": 1
+              },
+              "max": 7.0,
+              "mean": 0.014909478168264111,
+              "median": 0.0,
+              "min": 0.0,
+              "n": 939,
+              "p25": 0.0,
+              "p75": 0.0
+            },
+            "n_detected": 939,
+            "n_events": 9368
+          },
+          "n_flagged": 57947,
+          "precision_by_horizon": {
+            "1": {
+              "base_rate": 0.7771998955662334,
+              "precision": 0.9950644554506705,
+              "recall": 0.12827837214320834
+            },
+            "3": {
+              "base_rate": 0.8051099926170169,
+              "precision": 0.999275199751497,
+              "recall": 0.12435545838961776
+            },
+            "5": {
+              "base_rate": 0.8155568273574972,
+              "precision": 0.9993787426441403,
+              "recall": 0.12277525371912916
+            }
+          },
+          "threshold_clearance_m": 0.0030776406404414,
+          "threshold_geometry_score": -0.0030776406404414
+        }
+      },
+      "regime": "block"
+    }
+  },
+  "streamvln": {
+    "r2r": {
+      "collision_streaks": {
+        "mean_event_length_steps": 4.308020457979774,
+        "n_episodes": 1839,
+        "n_episodes_with_collision": 1191,
+        "streak_continuation_fraction": 0.7678748256295549,
+        "total_collision_events": 86030,
+        "total_collision_steps": 370619
+      },
+      "geometry_available": true,
+      "n_decision_steps": 135612,
+      "n_rows": 541245,
+      "operating_points": {
+        "0.01": {
+          "actual_flag_rate": 0.010345692121641152,
+          "lead_time": {
+            "detection_rate": 0.02823433685923515,
+            "distribution_primitive_steps": {
+              "histogram_primitive_steps": {
+                "0": 232,
+                "1": 0,
+                "2": 175,
+                "3": 71,
+                "4": 43,
+                "5+": 1908
+              },
+              "max": 462.0,
+              "mean": 142.03252367229314,
+              "median": 104.0,
+              "min": 0.0,
+              "n": 2429,
+              "p25": 11.0,
+              "p75": 252.0
+            },
+            "n_detected": 2429,
+            "n_events": 86030
+          },
+          "n_flagged": 1403,
+          "precision_by_horizon": {
+            "1": {
+              "base_rate": 0.7481638793027166,
+              "precision": 1.0,
+              "recall": 0.013828109599842302
+            },
+            "3": {
+              "base_rate": 0.8467539745745214,
+              "precision": 1.0,
+              "recall": 0.012218061482191065
+            },
+            "5": {
+              "base_rate": 0.8542090670442144,
+              "precision": 1.0,
+              "recall": 0.01211142859609292
+            }
+          },
+          "threshold_clearance_m": -0.0739807763374846,
+          "threshold_geometry_score": 0.0739807763374846
+        },
+        "0.05": {
+          "actual_flag_rate": 0.05002507152759343,
+          "lead_time": {
+            "detection_rate": 0.12344530977565965,
+            "distribution_primitive_steps": {
+              "histogram_primitive_steps": {
+                "0": 537,
+                "1": 0,
+                "2": 442,
+                "3": 208,
+                "4": 135,
+                "5+": 9298
+              },
+              "max": 482.0,
+              "mean": 170.30131826741996,
+              "median": 152.0,
+              "min": 0.0,
+              "n": 10620,
+              "p25": 40.0,
+              "p75": 284.0
+            },
+            "n_detected": 10620,
+            "n_events": 86030
+          },
+          "n_flagged": 6784,
+          "precision_by_horizon": {
+            "1": {
+              "base_rate": 0.7481638793027166,
+              "precision": 1.0,
+              "recall": 0.06686378868519614
+            },
+            "3": {
+              "base_rate": 0.8467539745745214,
+              "precision": 1.0,
+              "recall": 0.05907863798658887
+            },
+            "5": {
+              "base_rate": 0.8542090670442144,
+              "precision": 1.0,
+              "recall": 0.05856303036058045
+            }
+          },
+          "threshold_clearance_m": -0.0429912287450431,
+          "threshold_geometry_score": 0.0429912287450431
+        },
+        "0.1": {
+          "actual_flag_rate": 0.10218122290062827,
+          "lead_time": {
+            "detection_rate": 0.2114494943624317,
+            "distribution_primitive_steps": {
+              "histogram_primitive_steps": {
+                "0": 985,
+                "1": 0,
+                "2": 781,
+                "3": 335,
+                "4": 228,
+                "5+": 15862
+              },
+              "max": 482.0,
+              "mean": 173.0869111098895,
+              "median": 156.0,
+              "min": 0.0,
+              "n": 18191,
+              "p25": 38.0,
+              "p75": 290.0
+            },
+            "n_detected": 18191,
+            "n_events": 86030
+          },
+          "n_flagged": 13857,
+          "precision_by_horizon": {
+            "1": {
+              "base_rate": 0.7481638793027166,
+              "precision": 0.9997835029227106,
+              "recall": 0.1365464222353637
+            },
+            "3": {
+              "base_rate": 0.8467539745745214,
+              "precision": 0.9997835029227106,
+              "recall": 0.12064791430810763
+            },
+            "5": {
+              "base_rate": 0.8542090670442144,
+              "precision": 0.9998556686151404,
+              "recall": 0.11960359458222909
+            }
+          },
+          "threshold_clearance_m": -0.0151471862576143,
+          "threshold_geometry_score": 0.0151471862576143
+        }
+      },
+      "regime": "block"
+    }
+  }
+}

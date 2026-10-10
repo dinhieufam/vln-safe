@@ -1,0 +1,34 @@
+# R2R-CE. Every geometry constant here is echoed into manifest.json at run time and read
+# by vlnsafe.geometry / vlnsafe.simulator -- never hard-coded in code (a hard-coded R2R
+# value silently corrupts every RxR number).
+#
+# Values below are the archived-runner defaults (habitat-lab defaults for R2R). Phase B3
+# verifies each against the merged habitat config before the equivalence gate.
+id: r2r
+# the VLN-CE base config the harness merges to build the Habitat env (relative to
+# external/VLN-CE); regime + rig overrides are applied on top in simulator/environment.py
+habitat_base_config: vlnce_baselines/config/r2r_baselines/cma_pm_da_aug_tune.yaml
+# dataset roots by tokenizer/encoding; an agent config's `dataset: {r2r: <key>}` selects the
+# instruction source. `official` also supplies the episode list, order and NDTW/SDTW GT.
+dataset:
+  official: ${VLNSAFE_DATASETS}/R2R_VLNCE_v1-3_preprocessed         # SR/SPL/NDTW GT + splits
+  bert: ${VLNSAFE_DATASETS}/R2R_VLNCE_v1-2_preprocessed_BERTidx     # ETPNav / BEVBert tokenizer
+  xlmr: ${VLNSAFE_DATASETS}/R2R_VLNCE_v1-3_preprocessed_xlmr        # ETP-R1 (XLM-R) tokenizer
+  scenes: ${VLNSAFE_DATASETS}                                       # parent of mp3d/
+# habitat TASK_CONFIG.DATASET.TYPE per dataset key: the v1 loader expects an
+# `instruction_vocab` block (the official split and the BERTidx pass have one); the xlmr
+# pass (ETP-R1) does not and needs the v2 loader instead. Any key not
+# listed here defaults to VLN-CE-v1 in vlnsafe.config.benchmark_dataset_type.
+dataset_type:
+  official: VLN-CE-v1
+  bert: VLN-CE-v1
+  xlmr: VLN-CE-v2
+split: val_unseen
+rig:
+  hfov_deg: 90
+  camera_height_m: 1.25
+  forward_step_m: 0.25
+  turn_angle_deg: 15
+  agent_radius_m: 0.10
+  depth_clearance_min_m: 0.0
+  depth_clearance_max_m: 10.0

@@ -1,0 +1,10 @@
+{
+  "agent": "etpnav",
+  "benchmark": "r2r",
+  "episode_count": 1839,
+  "migrated_from": "e1_full_r2r_no_sliding/e1_r2r_val_unseen_no_sliding_per_episode_real_sim_log.csv",
+  "note": "migrated from pre-release harness logs; see results/provenance.md",
+  "regime": "block",
+  "seed": 20260704,
+  "split": "val_unseen"
+}

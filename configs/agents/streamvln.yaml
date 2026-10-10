@@ -1,0 +1,58 @@
+# StreamVLN (T1, navigation VLA). 8B Qwen video model in its own conda env with no
+# habitat (family: streamvln_worker). Emits text with STOP / ↑ / ← / → and several
+# primitives per generation; the worker keeps the SlowFast/KV-cache history across
+# requests within an episode.
+# Constants below are read from external/StreamVLN @ e48f6ff (streamvln/streamvln_agent.py,
+# config/vln_r2r.yaml) -- see docs/agent_notes/streamvln.md.
+id: streamvln
+display_name: StreamVLN
+tier: T1
+family: streamvln_worker
+worker_python: $VLNSAFE_ENVS/vlnsafe-streamvln/bin/python
+code_root: external/StreamVLN
+sensor_rig: streamvln
+# the repo loads with torch_dtype=torch.bfloat16 + flash_attention_2, not fp16 as
+# originally assumed (streamvln_agent.py:__main__).
+precision: bf16
+
+# StreamVLN's own eval camera (config/vln_r2r.yaml): 640x480 HFOV 79, depth 0-10 m. The
+# model's SR degrades at any other camera, so these live here, never in the harness.
+rig:
+  rgb:   {width: 640, height: 480, hfov_deg: 79}
+  depth: {width: 640, height: 480, hfov_deg: 79, min_m: 0.0, max_m: 10.0}
+
+# the streaming schedule the agent class expects (streamvln_agent.py / streamvln_eval.py):
+# a frame is pushed every executed step; generate() runs only when the queued chunk is
+# empty, and the KV cache is reset every `num_frames` steps.
+model:
+  num_frames: 32
+  num_future_steps: 4
+  num_history: 8
+  model_max_length: 4096
+
+exp_config:
+  # habitat-lab 0.2.4 hydra config, kept for provenance only -- our 0.1.7 harness builds
+  # the env itself from `rig:` above. The repo ships no RxR eval config.
+  r2r: config/vln_r2r.yaml
+dataset:
+  r2r: official
+  rxr: base
+# the benchmark-reproduction checkpoint, never the _real_world one (obstacle-avoidance
+# tuned -- it would confound the safety result).
+checkpoint:
+  r2r: ${VLNSAFE_CHECKPOINTS}/streamvln/streamvln_video_qwen
+  rxr: ${VLNSAFE_CHECKPOINTS}/streamvln/streamvln_video_qwen
+
+published:
+  r2r: {sr: 56.4, spl: 50.2, regime: slide, source: "StreamVLN Tab. 2 (R2R-CE val-unseen)"}
+  # StreamVLN README (2025-09-28 note for the _v1_3 checkpoint): RxR NE 5.65, SR 54.4,
+  # SPL 45.4, nDTW 63.7. The README does not name the split or the collision regime; the
+  # paper reports RxR-CE val-unseen. Verify both before using it as a gate target.
+  rxr: {sr: 54.4, spl: 45.4, regime: block, source: "StreamVLN README, _v1_3 checkpoint note (split and regime not stated there)"}
+# upstream evaluated on habitat-sim 0.2.4; we run 0.1.7 -> wider gate, noted in Tab. 2.
+reproduction_tolerance_sr: 2.0
+
+unavailable:
+  value_estimate: >-
+    autoregressive language-model policy; no value head. P3 signals are the first
+    action-token logits restricted to {STOP, forward, left, right}.

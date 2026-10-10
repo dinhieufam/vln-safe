@@ -1,0 +1,14 @@
+# `stall` with no depth-frame memory: the method configuration for M1/M2/M3 from 2026-09-24
+# on. Replaying the unguarded block arms
+# (analysis/guard_memory.py, results/summary/guard_memory.json) showed that the 8-frame memory
+# made most depth vetoes false: precision .125 / .351 / .650 (ETP-R1 / CMA / StreamVLN)
+# with 8 frames vs .925 / .877 / .992 with 1. `stall` and `default` keep memory_frames 8 and
+# stay as the memory ablation.
+threshold_m: 0.05
+max_consecutive_aborts: 3
+max_episode_aborts: 12
+memory_frames: 1
+lookahead_steps: 2
+max_escape_deg: 90.0
+eps: 0.0
+stall_m: 0.01

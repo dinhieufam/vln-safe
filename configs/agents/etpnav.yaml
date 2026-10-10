@@ -1,0 +1,36 @@
+# ETPNav (T2, ETPNav-lineage). The reproduced backbone behind the P2/P3/P4 baseline
+# comparator.
+id: etpnav
+display_name: ETPNav
+tier: T2
+family: etpnav_worker
+worker_python: $VLNSAFE_ENVS/vlnsafe-etpnav/bin/python
+code_root: external/ETPNav
+worker_trainer_module: vlnce_baselines.ss_trainer_ETP   # SS trainer class the worker imports
+sensor_rig: etpnav_12view
+back_algo: control
+
+# the ETPNav config the WORKER loads to build its policy (relative to code_root)
+exp_config:
+  r2r: run_r2r/iter_train.yaml
+  rxr: run_rxr/iter_train.yaml
+# key into configs/benchmarks/<id>.yaml `dataset:` — ETPNav's checkpoint reads BERT-tokenised
+# instructions (R2R) / the XLM-R-encoded RxR split.
+dataset:
+  r2r: bert
+  rxr: xlmr
+checkpoint:
+  r2r: ${VLNSAFE_CHECKPOINTS}/etpnav/release_r2r/ckpt.iter12000.pth
+  rxr: ${VLNSAFE_CHECKPOINTS}/etpnav/release_rxr/ckpt.iter19600.pth
+pretrained:
+  r2r: ${VLNSAFE_MODELS}/pretrained/ETP/mlm.sap_r2r/ckpts/model_step_82500.pt
+  rxr: ${VLNSAFE_MODELS}/pretrained/ETP/mlm.sap_rxr/ckpts/model_step_90000.pt
+
+published:
+  r2r: {sr: 57.0, spl: 49.0, regime: slide, source: "ETPNav Tab. 2 (R2R-CE val-unseen)"}
+  rxr: {sr: null, regime: block, source: "ETPNav Tab. 3 reports RxR-CE val-unseen; no gate arm"}
+reproduction_tolerance_sr: 1.0
+# no value head: ETPNav's topological policy exposes stop scores and global logits but no
+# critic. \nmark in the P3 Value column (matches the committed tab_auroc.tex).
+unavailable:
+  value_estimate: "ETPNav's topological policy has no value head; only stop scores and global logits"

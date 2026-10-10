@@ -1,0 +1,602 @@
+{
+  "cma/r2r": {
+    "dirty_success": {
+      "block": 0.23318385650224216,
+      "ci95": [
+        0.11368262323082468,
+        0.244200651558824
+      ],
+      "delta": 0.17582515250676684,
+      "slide": 0.409009009009009
+    },
+    "episodes": 1839,
+    "length_controlled": {
+      "bins": [
+        {
+          "dsr_block": 0.05405405405405406,
+          "dsr_slide": 0.26277372262773724,
+          "n_block": 74,
+          "n_slide": 137,
+          "steps_upper": 39.0
+        },
+        {
+          "dsr_block": 0.19607843137254902,
+          "dsr_slide": 0.3680555555555556,
+          "n_block": 51,
+          "n_slide": 144,
+          "steps_upper": 48.0
+        },
+        {
+          "dsr_block": 0.22916666666666666,
+          "dsr_slide": 0.4806201550387597,
+          "n_block": 48,
+          "n_slide": 129,
+          "steps_upper": 58.75
+        },
+        {
+          "dsr_block": 0.54,
+          "dsr_slide": 0.5241379310344828,
+          "n_block": 50,
+          "n_slide": 145,
+          "steps_upper": 470.0
+        }
+      ],
+      "ci95": [
+        0.09354224319280799,
+        0.2186675772496449
+      ],
+      "stratified_delta": 0.15294287053768385,
+      "successes_block": {
+        "collisions_per_100_primitives": 14.925250533924757,
+        "mean_steps": 54.591928251121075
+      },
+      "successes_slide": {
+        "collisions_per_100_primitives": 3.141738772146683,
+        "mean_steps": 52.475675675675674
+      }
+    },
+    "success": {
+      "block": 0.1212615551930397,
+      "ci95": [
+        0.1625883632408918,
+        0.19902120717781402
+      ],
+      "delta": 0.18053289831430125,
+      "mcnemar_exact_p": 1.0123827744490706e-85,
+      "only_block": 12,
+      "only_slide": 344,
+      "slide": 0.30179445350734097
+    },
+    "survivorship": {
+      "block_fail_share_if_slide_clean": 0.4176829268292683,
+      "block_fail_share_if_slide_dirty": 0.9118942731277533,
+      "slide_clean_successes": 328,
+      "slide_dirty_successes": 227
+    }
+  },
+  "etpnav/r2r": {
+    "dirty_success": {
+      "block": 0.3180628272251309,
+      "ci95": [
+        0.057220057603064346,
+        0.11145439509365118
+      ],
+      "delta": 0.08346680948615015,
+      "slide": 0.40152963671128106
+    },
+    "episodes": 1839,
+    "length_controlled": {
+      "bins": [
+        {
+          "dsr_block": 0.07035175879396985,
+          "dsr_slide": 0.24199288256227758,
+          "n_block": 199,
+          "n_slide": 281,
+          "steps_upper": 44.0
+        },
+        {
+          "dsr_block": 0.18421052631578946,
+          "dsr_slide": 0.34108527131782945,
+          "n_block": 190,
+          "n_slide": 258,
+          "steps_upper": 56.0
+        },
+        {
+          "dsr_block": 0.3235294117647059,
+          "dsr_slide": 0.4393939393939394,
+          "n_block": 170,
+          "n_slide": 264,
+          "steps_upper": 74.0
+        },
+        {
+          "dsr_block": 0.6780487804878049,
+          "dsr_slide": 0.6090534979423868,
+          "n_block": 205,
+          "n_slide": 243,
+          "steps_upper": 469.0
+        }
+      ],
+      "ci95": [
+        0.07092820706382544,
+        0.11982846978147059
+      ],
+      "stratified_delta": 0.0950513500444429,
+      "successes_block": {
+        "collisions_per_100_primitives": 8.087524645300963,
+        "mean_steps": 67.71465968586388
+      },
+      "successes_slide": {
+        "collisions_per_100_primitives": 3.8784563063729114,
+        "mean_steps": 64.65583173996176
+      }
+    },
+    "success": {
+      "block": 0.4154431756389342,
+      "ci95": [
+        0.1343121261555193,
+        0.1729200652528548
+      ],
+      "delta": 0.1533442088091354,
+      "mcnemar_exact_p": 1.0573702783442704e-54,
+      "only_block": 43,
+      "only_slide": 325,
+      "slide": 0.5687873844480696
+    },
+    "survivorship": {
+      "block_fail_share_if_slide_clean": 0.12140575079872204,
+      "block_fail_share_if_slide_dirty": 0.5928571428571429,
+      "slide_clean_successes": 626,
+      "slide_dirty_successes": 420
+    }
+  },
+  "etpnav/rxr": {
+    "dirty_success": {
+      "block": 0.6293706293706294,
+      "ci95": [
+        0.10904037044679327,
+        0.1969089161975121
+      ],
+      "delta": 0.1534220363557458,
+      "slide": 0.7827926657263752
+    },
+    "episodes": 1223,
+    "length_controlled": {
+      "bins": [
+        {
+          "dsr_block": 0.35051546391752575,
+          "dsr_slide": 0.5032258064516129,
+          "n_block": 97,
+          "n_slide": 155,
+          "steps_upper": 29.0
+        },
+        {
+          "dsr_block": 0.4230769230769231,
+          "dsr_slide": 0.764102564102564,
+          "n_block": 52,
+          "n_slide": 195,
+          "steps_upper": 51.0
+        },
+        {
+          "dsr_block": 0.6578947368421053,
+          "dsr_slide": 0.8767772511848341,
+          "n_block": 38,
+          "n_slide": 211,
+          "steps_upper": 98.0
+        },
+        {
+          "dsr_block": 1.0,
+          "dsr_slide": 0.9662162162162162,
+          "n_block": 99,
+          "n_slide": 148,
+          "steps_upper": 433.0
+        }
+      ],
+      "ci95": [
+        0.12308812196237612,
+        0.2204214377577171
+      ],
+      "stratified_delta": 0.16972210163685242,
+      "successes_block": {
+        "collisions_per_100_primitives": 43.99043985843637,
+        "mean_steps": 76.07342657342657
+      },
+      "successes_slide": {
+        "collisions_per_100_primitives": 7.4659023924223025,
+        "mean_steps": 69.38928067700988
+      }
+    },
+    "success": {
+      "block": 0.2338511856091578,
+      "ci95": [
+        0.31643499591169255,
+        0.37530662305805396
+      ],
+      "delta": 0.34587080948487325,
+      "mcnemar_exact_p": 1.5774057827513074e-103,
+      "only_block": 22,
+      "only_slide": 445,
+      "slide": 0.5797219950940311
+    },
+    "survivorship": {
+      "block_fail_share_if_slide_clean": 0.14285714285714285,
+      "block_fail_share_if_slide_dirty": 0.7621621621621621,
+      "slide_clean_successes": 154,
+      "slide_dirty_successes": 555
+    }
+  },
+  "etpr1/r2r": {
+    "dirty_success": {
+      "block": 0.42303552206673845,
+      "ci95": [
+        -0.030576851744974952,
+        0.018231535008444204
+      ],
+      "delta": -0.00636885540007176,
+      "slide": 0.4166666666666667
+    },
+    "episodes": 1839,
+    "length_controlled": {
+      "bins": [
+        {
+          "dsr_block": 0.2,
+          "dsr_slide": 0.2781065088757396,
+          "n_block": 245,
+          "n_slide": 338,
+          "steps_upper": 45.0
+        },
+        {
+          "dsr_block": 0.3034825870646766,
+          "dsr_slide": 0.4066666666666667,
+          "n_block": 201,
+          "n_slide": 300,
+          "steps_upper": 58.0
+        },
+        {
+          "dsr_block": 0.3719806763285024,
+          "dsr_slide": 0.4485049833887043,
+          "n_block": 207,
+          "n_slide": 301,
+          "steps_upper": 79.0
+        },
+        {
+          "dsr_block": 0.7463768115942029,
+          "dsr_slide": 0.5783132530120482,
+          "n_block": 276,
+          "n_slide": 249,
+          "steps_upper": 496.0
+        }
+      ],
+      "ci95": [
+        -0.0013496836771706604,
+        0.046264643808816605
+      ],
+      "stratified_delta": 0.0226132726906493,
+      "successes_block": {
+        "collisions_per_100_primitives": 9.016646115906289,
+        "mean_steps": 76.82238966630786
+      },
+      "successes_slide": {
+        "collisions_per_100_primitives": 3.0812816527102243,
+        "mean_steps": 67.14814814814815
+      }
+    },
+    "success": {
+      "block": 0.5051658510059815,
+      "ci95": [
+        0.1239668297988037,
+        0.15932572050027188
+      ],
+      "delta": 0.1408374116367591,
+      "mcnemar_exact_p": 2.541407304337318e-51,
+      "only_block": 37,
+      "only_slide": 296,
+      "slide": 0.6460032626427407
+    },
+    "survivorship": {
+      "block_fail_share_if_slide_clean": 0.10966810966810966,
+      "block_fail_share_if_slide_dirty": 0.4444444444444444,
+      "slide_clean_successes": 693,
+      "slide_dirty_successes": 495
+    }
+  },
+  "etpr1/rxr": {
+    "dirty_success": {
+      "block": 0.6513157894736842,
+      "ci95": [
+        0.09596286608785204,
+        0.18413111006521596
+      ],
+      "delta": 0.1392933475821534,
+      "slide": 0.7906091370558376
+    },
+    "episodes": 1223,
+    "length_controlled": {
+      "bins": [
+        {
+          "dsr_block": 0.3711340206185567,
+          "dsr_slide": 0.4972067039106145,
+          "n_block": 97,
+          "n_slide": 179,
+          "steps_upper": 31.0
+        },
+        {
+          "dsr_block": 0.38,
+          "dsr_slide": 0.7920353982300885,
+          "n_block": 50,
+          "n_slide": 226,
+          "steps_upper": 56.0
+        },
+        {
+          "dsr_block": 0.7407407407407407,
+          "dsr_slide": 0.8883720930232558,
+          "n_block": 54,
+          "n_slide": 215,
+          "steps_upper": 101.0
+        },
+        {
+          "dsr_block": 1.0,
+          "dsr_slide": 0.9761904761904762,
+          "n_block": 103,
+          "n_slide": 168,
+          "steps_upper": 362.0
+        }
+      ],
+      "ci95": [
+        0.12368575507311382,
+        0.20990556087545412
+      ],
+      "stratified_delta": 0.16646362940634432,
+      "successes_block": {
+        "collisions_per_100_primitives": 41.99578947368421,
+        "mean_steps": 78.125
+      },
+      "successes_slide": {
+        "collisions_per_100_primitives": 7.3420667392365155,
+        "mean_steps": 67.61675126903553
+      }
+    },
+    "success": {
+      "block": 0.24856909239574815,
+      "ci95": [
+        0.36631234668847096,
+        0.42518397383483236
+      ],
+      "delta": 0.39574816026165166,
+      "mcnemar_exact_p": 1.0381904119929815e-131,
+      "only_block": 10,
+      "only_slide": 494,
+      "slide": 0.6443172526573998
+    },
+    "survivorship": {
+      "block_fail_share_if_slide_clean": 0.1393939393939394,
+      "block_fail_share_if_slide_dirty": 0.7560192616372392,
+      "slide_clean_successes": 165,
+      "slide_dirty_successes": 623
+    }
+  },
+  "omninav/r2r": {
+    "dirty_success": {
+      "block": 0.48353552859618715,
+      "ci95": [
+        0.04825043105456821,
+        0.12416536110338183
+      ],
+      "delta": 0.08455472120236246,
+      "slide": 0.5680902497985496
+    },
+    "episodes": 1839,
+    "length_controlled": {
+      "bins": [
+        {
+          "dsr_block": 0.11267605633802817,
+          "dsr_slide": 0.40532544378698226,
+          "n_block": 142,
+          "n_slide": 338,
+          "steps_upper": 44.0
+        },
+        {
+          "dsr_block": 0.25688073394495414,
+          "dsr_slide": 0.5454545454545454,
+          "n_block": 109,
+          "n_slide": 330,
+          "steps_upper": 54.0
+        },
+        {
+          "dsr_block": 0.5539568345323741,
+          "dsr_slide": 0.6165644171779141,
+          "n_block": 139,
+          "n_slide": 326,
+          "steps_upper": 67.0
+        },
+        {
+          "dsr_block": 0.8449197860962567,
+          "dsr_slide": 0.757085020242915,
+          "n_block": 187,
+          "n_slide": 247,
+          "steps_upper": 200.0
+        }
+      ],
+      "ci95": [
+        0.10888635372112358,
+        0.17679020728199535
+      ],
+      "stratified_delta": 0.14199551527944682,
+      "successes_block": {
+        "collisions_per_100_primitives": 15.619394698630527,
+        "mean_steps": 60.871750433275565
+      },
+      "successes_slide": {
+        "collisions_per_100_primitives": 4.209579042095791,
+        "mean_steps": 56.411764705882355
+      }
+    },
+    "success": {
+      "block": 0.3137574768896139,
+      "ci95": [
+        0.3376835236541599,
+        0.38553561718325174
+      ],
+      "delta": 0.3610657966286025,
+      "mcnemar_exact_p": 2.813603345131308e-153,
+      "only_block": 47,
+      "only_slide": 711,
+      "slide": 0.6748232735182165
+    },
+    "survivorship": {
+      "block_fail_share_if_slide_clean": 0.29850746268656714,
+      "block_fail_share_if_slide_dirty": 0.7815602836879433,
+      "slide_clean_successes": 536,
+      "slide_dirty_successes": 705
+    }
+  },
+  "seq2seq/r2r": {
+    "dirty_success": {
+      "block": 0.2094240837696335,
+      "ci95": [
+        0.14625946701459622,
+        0.26758862265323535
+      ],
+      "delta": 0.20580933146378172,
+      "slide": 0.4152334152334152
+    },
+    "episodes": 1839,
+    "length_controlled": {
+      "bins": [
+        {
+          "dsr_block": 0.0,
+          "dsr_slide": 0.22115384615384615,
+          "n_block": 61,
+          "n_slide": 104,
+          "steps_upper": 41.0
+        },
+        {
+          "dsr_block": 0.12244897959183673,
+          "dsr_slide": 0.32989690721649484,
+          "n_block": 49,
+          "n_slide": 97,
+          "steps_upper": 50.0
+        },
+        {
+          "dsr_block": 0.21621621621621623,
+          "dsr_slide": 0.45871559633027525,
+          "n_block": 37,
+          "n_slide": 109,
+          "steps_upper": 62.0
+        },
+        {
+          "dsr_block": 0.5909090909090909,
+          "dsr_slide": 0.6597938144329897,
+          "n_block": 44,
+          "n_slide": 97,
+          "steps_upper": 458.0
+        }
+      ],
+      "ci95": [
+        0.1306262988222426,
+        0.24234755383593853
+      ],
+      "stratified_delta": 0.18711611632459374,
+      "successes_block": {
+        "collisions_per_100_primitives": 23.486881335718547,
+        "mean_steps": 70.24083769633508
+      },
+      "successes_slide": {
+        "collisions_per_100_primitives": 1.7564727806193252,
+        "mean_steps": 61.96805896805897
+      }
+    },
+    "success": {
+      "block": 0.10386079390973355,
+      "ci95": [
+        0.10168569874932028,
+        0.13322457857531267
+      ],
+      "delta": 0.11745513866231648,
+      "mcnemar_exact_p": 6.838146957848388e-51,
+      "only_block": 15,
+      "only_slide": 231,
+      "slide": 0.22131593257205004
+    },
+    "survivorship": {
+      "block_fail_share_if_slide_clean": 0.3403361344537815,
+      "block_fail_share_if_slide_dirty": 0.8875739644970414,
+      "slide_clean_successes": 238,
+      "slide_dirty_successes": 169
+    }
+  },
+  "streamvln/r2r": {
+    "dirty_success": {
+      "block": 0.17647058823529413,
+      "ci95": [
+        0.16976978187655845,
+        0.2443082832586942
+      ],
+      "delta": 0.20836906191047846,
+      "slide": 0.3848396501457726
+    },
+    "episodes": 1839,
+    "length_controlled": {
+      "bins": [
+        {
+          "dsr_block": 0.1377245508982036,
+          "dsr_slide": 0.18099547511312217,
+          "n_block": 167,
+          "n_slide": 221,
+          "steps_upper": 45.0
+        },
+        {
+          "dsr_block": 0.15789473684210525,
+          "dsr_slide": 0.28205128205128205,
+          "n_block": 152,
+          "n_slide": 273,
+          "steps_upper": 55.0
+        },
+        {
+          "dsr_block": 0.11214953271028037,
+          "dsr_slide": 0.4163265306122449,
+          "n_block": 107,
+          "n_slide": 245,
+          "steps_upper": 67.0
+        },
+        {
+          "dsr_block": 0.36904761904761907,
+          "dsr_slide": 0.6103448275862069,
+          "n_block": 84,
+          "n_slide": 290,
+          "steps_upper": 355.0
+        }
+      ],
+      "ci95": [
+        0.1347595023170165,
+        0.20933183806478006
+      ],
+      "stratified_delta": 0.17340552928148922,
+      "successes_block": {
+        "collisions_per_100_primitives": 3.006012024048096,
+        "mean_steps": 55.77058823529412
+      },
+      "successes_slide": {
+        "collisions_per_100_primitives": 2.4237191446059914,
+        "mean_steps": 63.031098153547134
+      }
+    },
+    "success": {
+      "block": 0.27732463295269166,
+      "ci95": [
+        0.26101141924959215,
+        0.3045133224578575
+      ],
+      "delta": 0.2822185970636215,
+      "mcnemar_exact_p": 3.928259993807349e-133,
+      "only_block": 19,
+      "only_slide": 538,
+      "slide": 0.5595432300163132
+    },
+    "survivorship": {
+      "block_fail_share_if_slide_clean": 0.2890995260663507,
+      "block_fail_share_if_slide_dirty": 0.8964646464646465,
+      "slide_clean_successes": 633,
+      "slide_dirty_successes": 396
+    }
+  }
+}

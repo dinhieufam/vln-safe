@@ -1,0 +1,14 @@
+key,short_name,year,sr_reported,spl_reported,regime_stated,regime_inferred,verification,notes
+krantz2020vlnce,VLN-CE (CMA),2020,32,30,N,sliding on,full,Verified 2026-09-09: Table 3 val-unseen CMA+PM+DA+Aug SR 0.32 SPL 0.30. Sliding permitted in the released config.
+krantz2021waypoint,Waypoint models,2021,36,34,N,unknown,full,Verified 2026-09-09: Table 3 val-unseen HPN+DN SR 36 SPL 34.
+krantz2022sim2sim,Sim2Sim,2022,43,36,N,unknown,full,Verified 2026-09-09 (arXiv:2204.09667): Table 5 val-unseen VLN-CE-BERT SR 43 SPL 36; no mention of sliding or collisions.
+hong2022cwp,CWP-RecBERT,2022,45,40,N,unknown,full,Verified 2026-09-09: Table 4 row 9 (main model with augmented waypoints) val-unseen SR 45.19 SPL 39.91. Other papers cite 44/39 for this model; we use the source paper's own main row.
+an2025etpnav,ETPNav,2023,57,49,Y,sliding on,full,Verified 2026-09-09: Table II val-unseen SR 57 SPL 49; states 'can slide along obstacles' for R2R-CE. Reports no collision metric.
+an2023bevbert,BEVBert,2023,59,50,N,unknown,full,Verified 2026-09-09: Table 2 val-unseen SR 59 SPL 50; no mention of sliding or collisions.
+wang2024hnr,HNR,2024,61,51,N,unknown,full,Verified 2026-09-09: R2R-CE table val-unseen SR 61 SPL 51; no mention of sliding or collisions.
+cheng2025navila,NaVILA,2025,54,49,N,unknown,full,Verified 2026-09-09: Table I val-unseen SR 54.0 SPL 49.0 (monocular); sliding not stated.
+wei2025streamvln,StreamVLN,2025,56,50,N,unknown,full,Verified 2026-09-09: Table I StreamVLN-dagger (extra VLN data) val-unseen SR 56.4 SPL 50.2; without extra data 52.8/47.2. Later papers cite 56.9/51.9 (ICRA version?). Sliding not stated.
+wei2025dualvln,InternVLA-N1 (DualVLN),2025,64,59,N,unknown,full,Verified 2026-09-09: Table 1 monocular val-unseen SR 64.3 SPL 58.5 (the earlier InternVLA-N1 release reported 58.2/54.0 in its README). Sliding not stated.
+ye2025etpr1,ETP-R1,2025,65,56,Y,sliding on,full,Verified 2026-09-09: Table I val-unseen SR 65 SPL 56; states the R2R-CE agent 'is permitted to slide along obstacles'.
+ye2026toporl,Topo-RFT,2026,68,57,N,unknown,full,Verified 2026-09-09: Table I Ours-RFT val-unseen SR 68.1 SPL 57.3; controller 'rotate-then-forward with tryout'; sliding not stated.
+zhang2026qwenrobotnav,Qwen-RobotNav-8B,2026,72,67,N,unknown,full,Verified 2026-09-09: Table 1 panoramic val-unseen SR 72.1 SPL 66.6 (monocular 65.7/59.6). Sliding not stated.

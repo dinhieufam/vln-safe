@@ -1,0 +1,13 @@
+# `stall-mem1` with the navmesh as the predictor: the oracle guard. A forward
+# is vetoed iff the regime's navmesh filter would shorten it, and escape headings are screened
+# the same way; everything else (stall veto, caps, escape, hand-back) is the method's. The upper
+# bound for any collision guard with this machinery. Uses simulator state no deployed agent has.
+threshold_m: 0.05
+max_consecutive_aborts: 3
+max_episode_aborts: 12
+memory_frames: 1
+lookahead_steps: 2
+max_escape_deg: 90.0
+eps: 0.0
+stall_m: 0.01
+oracle: true

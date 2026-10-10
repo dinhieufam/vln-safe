@@ -1,0 +1,470 @@
+{
+  "cma": {
+    "r2r": {
+      "availability_rate_all_decisions_eps10pct": 0.0314473809750978,
+      "eps_sweep": {
+        "0.02": {
+          "availability_rate_among_risky": 0.0036541597513940647,
+          "headroom_rate_conditional_on_availability": 1.0,
+          "headroom_rate_unconditional": 0.0036541597513940647,
+          "n_with_availability": 2019
+        },
+        "0.05": {
+          "availability_rate_among_risky": 0.010801399403823565,
+          "headroom_rate_conditional_on_availability": 1.0,
+          "headroom_rate_unconditional": 0.010801399403823565,
+          "n_with_availability": 5968
+        },
+        "0.1": {
+          "availability_rate_among_risky": 0.02476828935008805,
+          "headroom_rate_conditional_on_availability": 1.0,
+          "headroom_rate_unconditional": 0.02476828935008805,
+          "n_with_availability": 13685
+        },
+        "0.15": {
+          "availability_rate_among_risky": 0.04167624397986683,
+          "headroom_rate_conditional_on_availability": 1.0,
+          "headroom_rate_unconditional": 0.04167624397986683,
+          "n_with_availability": 23027
+        },
+        "0.2": {
+          "availability_rate_among_risky": 0.06260576521073408,
+          "headroom_rate_conditional_on_availability": 1.0,
+          "headroom_rate_unconditional": 0.06260576521073408,
+          "n_with_availability": 34591
+        },
+        "0.3": {
+          "availability_rate_among_risky": 0.11224912718249623,
+          "headroom_rate_conditional_on_availability": 1.0,
+          "headroom_rate_unconditional": 0.11224912718249623,
+          "n_with_availability": 62020
+        },
+        "0.4": {
+          "availability_rate_among_risky": 0.17219797980529247,
+          "headroom_rate_conditional_on_availability": 1.0,
+          "headroom_rate_unconditional": 0.17219797980529247,
+          "n_with_availability": 95143
+        },
+        "0.5": {
+          "availability_rate_among_risky": 0.2379891443040174,
+          "headroom_rate_conditional_on_availability": 1.0,
+          "headroom_rate_unconditional": 0.2379891443040174,
+          "n_with_availability": 131494
+        }
+      },
+      "n_decision_steps": 628860,
+      "n_risky_decisions": 552521,
+      "regime": "block",
+      "tier": "T1"
+    }
+  },
+  "etpnav": {
+    "r2r": {
+      "availability_rate_all_decisions_eps10pct": 0.09098742903487429,
+      "eps_sweep": {
+        "0.02": {
+          "availability_rate_among_risky": 0.008260670032124828,
+          "headroom_rate_conditional_on_availability": 0.16666666666666666,
+          "headroom_rate_unconditional": 0.0013767783386874712,
+          "n_with_availability": 36
+        },
+        "0.05": {
+          "availability_rate_among_risky": 0.019963285910968333,
+          "headroom_rate_conditional_on_availability": 0.14942528735632185,
+          "headroom_rate_unconditional": 0.0029830197338228544,
+          "n_with_availability": 87
+        },
+        "0.1": {
+          "availability_rate_among_risky": 0.03877925653969711,
+          "headroom_rate_conditional_on_availability": 0.17159763313609466,
+          "headroom_rate_unconditional": 0.006654428636989445,
+          "n_with_availability": 169
+        },
+        "0.15": {
+          "availability_rate_among_risky": 0.06080770995869665,
+          "headroom_rate_conditional_on_availability": 0.21132075471698114,
+          "headroom_rate_unconditional": 0.012849931161083065,
+          "n_with_availability": 265
+        },
+        "0.2": {
+          "availability_rate_among_risky": 0.08834327673244607,
+          "headroom_rate_conditional_on_availability": 0.23376623376623376,
+          "headroom_rate_unconditional": 0.02065167508031207,
+          "n_with_availability": 385
+        },
+        "0.3": {
+          "availability_rate_among_risky": 0.15580541532813216,
+          "headroom_rate_conditional_on_availability": 0.2533136966126657,
+          "headroom_rate_unconditional": 0.03946764570904084,
+          "n_with_availability": 679
+        },
+        "0.4": {
+          "availability_rate_among_risky": 0.2296925195043598,
+          "headroom_rate_conditional_on_availability": 0.3116883116883117,
+          "headroom_rate_unconditional": 0.0715924736117485,
+          "n_with_availability": 1001
+        },
+        "0.5": {
+          "availability_rate_among_risky": 0.31184029371271227,
+          "headroom_rate_conditional_on_availability": 0.3598233995584989,
+          "headroom_rate_unconditional": 0.11220743460302891,
+          "n_with_availability": 1359
+        }
+      },
+      "n_decision_steps": 19728,
+      "n_risky_decisions": 4358,
+      "regime": "block",
+      "tier": "T2"
+    },
+    "rxr": {
+      "availability_rate_all_decisions_eps10pct": 0.14371025283077402,
+      "eps_sweep": {
+        "0.02": {
+          "availability_rate_among_risky": 0.019442681590030576,
+          "headroom_rate_conditional_on_availability": 0.2314540059347181,
+          "headroom_rate_unconditional": 0.004500086540125772,
+          "n_with_availability": 337
+        },
+        "0.05": {
+          "availability_rate_among_risky": 0.05400103848150926,
+          "headroom_rate_conditional_on_availability": 0.21901709401709402,
+          "headroom_rate_unconditional": 0.011827150522125426,
+          "n_with_availability": 936
+        },
+        "0.1": {
+          "availability_rate_among_risky": 0.11925229331333295,
+          "headroom_rate_conditional_on_availability": 0.216255442670537,
+          "headroom_rate_unconditional": 0.025788957479951538,
+          "n_with_availability": 2067
+        },
+        "0.15": {
+          "availability_rate_among_risky": 0.1761380026538972,
+          "headroom_rate_conditional_on_availability": 0.22011136586963642,
+          "headroom_rate_unconditional": 0.03876997634569895,
+          "n_with_availability": 3053
+        },
+        "0.2": {
+          "availability_rate_among_risky": 0.23706225119713842,
+          "headroom_rate_conditional_on_availability": 0.22341202238987587,
+          "headroom_rate_unconditional": 0.05296255697224947,
+          "n_with_availability": 4109
+        },
+        "0.3": {
+          "availability_rate_among_risky": 0.3454681820804246,
+          "headroom_rate_conditional_on_availability": 0.26920507682030725,
+          "headroom_rate_unconditional": 0.09300178849593262,
+          "n_with_availability": 5988
+        },
+        "0.4": {
+          "availability_rate_among_risky": 0.4408354006807823,
+          "headroom_rate_conditional_on_availability": 0.331370239497448,
+          "headroom_rate_unconditional": 0.14607973230254429,
+          "n_with_availability": 7641
+        },
+        "0.5": {
+          "availability_rate_among_risky": 0.5317602261581954,
+          "headroom_rate_conditional_on_availability": 0.39448844526418575,
+          "headroom_rate_unconditional": 0.2097732648704783,
+          "n_with_availability": 9217
+        }
+      },
+      "n_decision_steps": 25788,
+      "n_risky_decisions": 17333,
+      "regime": "block",
+      "tier": "T2"
+    }
+  },
+  "etpr1": {
+    "r2r": {
+      "availability_rate_all_decisions_eps10pct": 0.1836237110783766,
+      "eps_sweep": {
+        "0.02": {
+          "availability_rate_among_risky": 0.05676373018798378,
+          "headroom_rate_conditional_on_availability": 0.13636363636363635,
+          "headroom_rate_unconditional": 0.007740508661997788,
+          "n_with_availability": 154
+        },
+        "0.05": {
+          "availability_rate_among_risky": 0.13343162550681903,
+          "headroom_rate_conditional_on_availability": 0.1464088397790055,
+          "headroom_rate_unconditional": 0.019535569480280134,
+          "n_with_availability": 362
+        },
+        "0.1": {
+          "availability_rate_among_risky": 0.2406929598230741,
+          "headroom_rate_conditional_on_availability": 0.16539050535987748,
+          "headroom_rate_unconditional": 0.03980833026170291,
+          "n_with_availability": 653
+        },
+        "0.15": {
+          "availability_rate_among_risky": 0.32731293770733505,
+          "headroom_rate_conditional_on_availability": 0.19594594594594594,
+          "headroom_rate_unconditional": 0.06413564319941024,
+          "n_with_availability": 888
+        },
+        "0.2": {
+          "availability_rate_among_risky": 0.3951345374124585,
+          "headroom_rate_conditional_on_availability": 0.23507462686567165,
+          "headroom_rate_unconditional": 0.09288610394397347,
+          "n_with_availability": 1072
+        },
+        "0.3": {
+          "availability_rate_among_risky": 0.5012900847769997,
+          "headroom_rate_conditional_on_availability": 0.3448529411764706,
+          "headroom_rate_unconditional": 0.1728713601179506,
+          "n_with_availability": 1360
+        },
+        "0.4": {
+          "availability_rate_among_risky": 0.5816439366015481,
+          "headroom_rate_conditional_on_availability": 0.4328263624841572,
+          "headroom_rate_unconditional": 0.2517508293402138,
+          "n_with_availability": 1578
+        },
+        "0.5": {
+          "availability_rate_among_risky": 0.6472539624032436,
+          "headroom_rate_conditional_on_availability": 0.5079726651480638,
+          "headroom_rate_unconditional": 0.3287873203096203,
+          "n_with_availability": 1756
+        }
+      },
+      "n_decision_steps": 19687,
+      "n_risky_decisions": 2713,
+      "regime": "block",
+      "tier": "T2"
+    },
+    "rxr": {
+      "availability_rate_all_decisions_eps10pct": 0.35925740090316105,
+      "eps_sweep": {
+        "0.02": {
+          "availability_rate_among_risky": 0.1006202203889926,
+          "headroom_rate_conditional_on_availability": 0.1538001196888091,
+          "headroom_rate_unconditional": 0.01547540193894141,
+          "n_with_availability": 1671
+        },
+        "0.05": {
+          "availability_rate_among_risky": 0.23122779550791836,
+          "headroom_rate_conditional_on_availability": 0.19322916666666667,
+          "headroom_rate_unconditional": 0.04467995423616547,
+          "n_with_availability": 3840
+        },
+        "0.1": {
+          "availability_rate_among_risky": 0.38989582706087794,
+          "headroom_rate_conditional_on_availability": 0.21266409266409267,
+          "headroom_rate_unconditional": 0.0829168422954176,
+          "n_with_availability": 6475
+        },
+        "0.15": {
+          "availability_rate_among_risky": 0.496898898055037,
+          "headroom_rate_conditional_on_availability": 0.23473097430925835,
+          "headroom_rate_unconditional": 0.11663756247365568,
+          "n_with_availability": 8252
+        },
+        "0.2": {
+          "availability_rate_among_risky": 0.5778286264828084,
+          "headroom_rate_conditional_on_availability": 0.26052521884118385,
+          "headroom_rate_unconditional": 0.15053892936713434,
+          "n_with_availability": 9596
+        },
+        "0.3": {
+          "availability_rate_among_risky": 0.6764015174324081,
+          "headroom_rate_conditional_on_availability": 0.32769518383334817,
+          "headroom_rate_unconditional": 0.2216535196001686,
+          "n_with_availability": 11233
+        },
+        "0.4": {
+          "availability_rate_among_risky": 0.7455289937977961,
+          "headroom_rate_conditional_on_availability": 0.38074468944350215,
+          "headroom_rate_unconditional": 0.28385620521466853,
+          "n_with_availability": 12381
+        },
+        "0.5": {
+          "availability_rate_among_risky": 0.7965315830673813,
+          "headroom_rate_conditional_on_availability": 0.4234200181433323,
+          "headroom_rate_unconditional": 0.3372674173541278,
+          "n_with_availability": 13228
+        }
+      },
+      "n_decision_steps": 25909,
+      "n_risky_decisions": 16607,
+      "regime": "block",
+      "tier": "T2"
+    }
+  },
+  "omninav": {
+    "r2r": {
+      "availability_rate_all_decisions_eps10pct": 0.0,
+      "eps_sweep": {
+        "0.02": {
+          "availability_rate_among_risky": 0.0,
+          "headroom_rate_conditional_on_availability": null,
+          "headroom_rate_unconditional": 0.0,
+          "n_with_availability": 0
+        },
+        "0.05": {
+          "availability_rate_among_risky": 0.0,
+          "headroom_rate_conditional_on_availability": null,
+          "headroom_rate_unconditional": 0.0,
+          "n_with_availability": 0
+        },
+        "0.1": {
+          "availability_rate_among_risky": 0.0,
+          "headroom_rate_conditional_on_availability": null,
+          "headroom_rate_unconditional": 0.0,
+          "n_with_availability": 0
+        },
+        "0.15": {
+          "availability_rate_among_risky": 0.0,
+          "headroom_rate_conditional_on_availability": null,
+          "headroom_rate_unconditional": 0.0,
+          "n_with_availability": 0
+        },
+        "0.2": {
+          "availability_rate_among_risky": 0.0,
+          "headroom_rate_conditional_on_availability": null,
+          "headroom_rate_unconditional": 0.0,
+          "n_with_availability": 0
+        },
+        "0.3": {
+          "availability_rate_among_risky": 0.0,
+          "headroom_rate_conditional_on_availability": null,
+          "headroom_rate_unconditional": 0.0,
+          "n_with_availability": 0
+        },
+        "0.4": {
+          "availability_rate_among_risky": 0.0,
+          "headroom_rate_conditional_on_availability": null,
+          "headroom_rate_unconditional": 0.0,
+          "n_with_availability": 0
+        },
+        "0.5": {
+          "availability_rate_among_risky": 0.0,
+          "headroom_rate_conditional_on_availability": null,
+          "headroom_rate_unconditional": 0.0,
+          "n_with_availability": 0
+        }
+      },
+      "n_decision_steps": 92878,
+      "n_risky_decisions": 31959,
+      "regime": "block",
+      "tier": "T1"
+    }
+  },
+  "seq2seq": {
+    "r2r": {
+      "availability_rate_all_decisions_eps10pct": 0.04465753850995147,
+      "eps_sweep": {
+        "0.02": {
+          "availability_rate_among_risky": 0.005635162703365303,
+          "headroom_rate_conditional_on_availability": 1.0,
+          "headroom_rate_unconditional": 0.005635162703365303,
+          "n_with_availability": 2533
+        },
+        "0.05": {
+          "availability_rate_among_risky": 0.014300365518054544,
+          "headroom_rate_conditional_on_availability": 1.0,
+          "headroom_rate_unconditional": 0.014300365518054544,
+          "n_with_availability": 6428
+        },
+        "0.1": {
+          "availability_rate_among_risky": 0.0299177528759797,
+          "headroom_rate_conditional_on_availability": 1.0,
+          "headroom_rate_unconditional": 0.0299177528759797,
+          "n_with_availability": 13448
+        },
+        "0.15": {
+          "availability_rate_among_risky": 0.04639387406868536,
+          "headroom_rate_conditional_on_availability": 1.0,
+          "headroom_rate_unconditional": 0.04639387406868536,
+          "n_with_availability": 20854
+        },
+        "0.2": {
+          "availability_rate_among_risky": 0.06324152000338154,
+          "headroom_rate_conditional_on_availability": 1.0,
+          "headroom_rate_unconditional": 0.06324152000338154,
+          "n_with_availability": 28427
+        },
+        "0.3": {
+          "availability_rate_among_risky": 0.09803136380726098,
+          "headroom_rate_conditional_on_availability": 1.0,
+          "headroom_rate_unconditional": 0.09803136380726098,
+          "n_with_availability": 44065
+        },
+        "0.4": {
+          "availability_rate_among_risky": 0.13861654864638187,
+          "headroom_rate_conditional_on_availability": 1.0,
+          "headroom_rate_unconditional": 0.13861654864638187,
+          "n_with_availability": 62308
+        },
+        "0.5": {
+          "availability_rate_among_risky": 0.18143088193744591,
+          "headroom_rate_conditional_on_availability": 1.0,
+          "headroom_rate_unconditional": 0.18143088193744591,
+          "n_with_availability": 81553
+        }
+      },
+      "n_decision_steps": 578357,
+      "n_risky_decisions": 449499,
+      "regime": "block",
+      "tier": "T1"
+    }
+  },
+  "streamvln": {
+    "r2r": {
+      "availability_rate_all_decisions_eps10pct": 0.01468159159956346,
+      "eps_sweep": {
+        "0.02": {
+          "availability_rate_among_risky": 9.856100926473488e-06,
+          "headroom_rate_conditional_on_availability": 1.0,
+          "headroom_rate_unconditional": 9.856100926473488e-06,
+          "n_with_availability": 1
+        },
+        "0.05": {
+          "availability_rate_among_risky": 7.88488074117879e-05,
+          "headroom_rate_conditional_on_availability": 1.0,
+          "headroom_rate_unconditional": 7.88488074117879e-05,
+          "n_with_availability": 8
+        },
+        "0.1": {
+          "availability_rate_among_risky": 0.0041986989946777055,
+          "headroom_rate_conditional_on_availability": 1.0,
+          "headroom_rate_unconditional": 0.0041986989946777055,
+          "n_with_availability": 426
+        },
+        "0.15": {
+          "availability_rate_among_risky": 0.009028188448649714,
+          "headroom_rate_conditional_on_availability": 1.0,
+          "headroom_rate_unconditional": 0.009028188448649714,
+          "n_with_availability": 916
+        },
+        "0.2": {
+          "availability_rate_among_risky": 0.015533215060122216,
+          "headroom_rate_conditional_on_availability": 1.0,
+          "headroom_rate_unconditional": 0.015533215060122216,
+          "n_with_availability": 1576
+        },
+        "0.3": {
+          "availability_rate_among_risky": 0.02908535383402326,
+          "headroom_rate_conditional_on_availability": 1.0,
+          "headroom_rate_unconditional": 0.02908535383402326,
+          "n_with_availability": 2951
+        },
+        "0.4": {
+          "availability_rate_among_risky": 0.04709245022669032,
+          "headroom_rate_conditional_on_availability": 1.0,
+          "headroom_rate_unconditional": 0.04709245022669032,
+          "n_with_availability": 4778
+        },
+        "0.5": {
+          "availability_rate_among_risky": 0.07700571653853736,
+          "headroom_rate_conditional_on_availability": 1.0,
+          "headroom_rate_unconditional": 0.07700571653853736,
+          "n_with_availability": 7813
+        }
+      },
+      "n_decision_steps": 135612,
+      "n_risky_decisions": 101460,
+      "regime": "block",
+      "tier": "T1"
+    }
+  }
+}

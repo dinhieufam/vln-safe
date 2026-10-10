@@ -1,0 +1,10 @@
+# vlnsafe/guard.py at its default operating point. `vlnsafe run --guard default` loads
+# this file. The paper's guard is `stall-mem1` (see README).
+threshold_m: 0.05            # metric margin, one navmesh voxel; same for every agent
+max_consecutive_aborts: 3    # livelock bound; aborts since the last unflagged policy forward
+max_episode_aborts: 12       # episode-level livelock bound: the p95 of aborts/episode in
+                             # M1, where ETP-R1's decision budget already ended every loop
+memory_frames: 8             # frames of odometry-registered depth points (blind zone < ~0.9 m)
+lookahead_steps: 2           # an escape heading must clear the margin for this many steps
+max_escape_deg: 90.0         # escape headings searched on each side
+eps: 0.0                     # candidate reselection; only 0 is implemented
